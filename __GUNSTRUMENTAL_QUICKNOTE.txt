@@ -1,0 +1,9 @@
+You should not use MIDIPARSER unless you know how it's working because you'd need to do a LOT of debugs.
+
+Convert MIDI
+http://en.nemidi.com/conversor/mid2txt.html
+
+Touhou reference DELAYBASE : 240 : 120 : 80 (rarely 60)
+
+CVARS:
+ha3_gunstrumental
