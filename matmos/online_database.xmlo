@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contents>
+<dynamic name="Manmade Common (T Small)">
+	<descriptible>
+		<nickname>Manmade Common (T Small)</nickname>
+		<description>Items commonly used by players to build houses, that aren't proeminent somewhere else (example: Tree log, Stone)</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="smalltotal">4</entry>
+	<entry sheet="smalltotal">5</entry>
+	<entry sheet="smalltotal">35</entry>
+	<entry sheet="smalltotal">41</entry>
+	<entry sheet="smalltotal">42</entry>
+	<entry sheet="smalltotal">44</entry>
+	<entry sheet="smalltotal">43</entry>
+	<entry sheet="smalltotal">45</entry>
+	<entry sheet="smalltotal">47</entry>
+	<entry sheet="smalltotal">53</entry>
+	<entry sheet="smalltotal">57</entry>
+	<entry sheet="smalltotal">67</entry>
+	<entry sheet="smalltotal">24</entry>
+</dynamic>
+<dynamic name="Rocks (T Small)">
+	<descriptible>
+		<nickname>Rocks (T Small)</nickname>
+		<description>Natural stones and cobblestone, including netherrack (does not include slabs)</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="smalltotal">1</entry>
+	<entry sheet="smalltotal">4</entry>
+	<entry sheet="smalltotal">48</entry>
+	<entry sheet="smalltotal">87</entry>
+</dynamic>
+<dynamic name="Water (T Small)">
+	<descriptible>
+		<nickname>Water (T Small)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="smalltotal">8</entry>
+	<entry sheet="smalltotal">9</entry>
+</dynamic>
+<dynamic name="Iceland (T Scan)">
+	<descriptible>
+		<nickname>Iceland (T Scan)</nickname>
+		<description>Snow and ice</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="scantotal">78</entry>
+	<entry sheet="scanthousand">79</entry>
+</dynamic>
+<dynamic name="Lava (T Small)">
+	<descriptible>
+		<nickname>Lava (T Small)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="smalltotal">10</entry>
+	<entry sheet="smalltotal">11</entry>
+</dynamic>
+<condition name="Receive Sunlight">
+	<descriptible>
+		<nickname>Receive Sunlight</nickname>
+		<description>Uses the stored sunlight in memory, therefore it is still true at might.</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>0</key>
+	<symbol>&gt;</symbol>
+	<constant>0.0</constant>
+</condition>
+<condition name="Time (0 - 12000)">
+	<descriptible>
+		<nickname>Time (0 - 12000)</nickname>
+		<description>Early to Begin Late</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>12000.0</constant>
+</condition>
+<condition name="Time (0 - 6000)">
+	<descriptible>
+		<nickname>Time (0 - 6000)</nickname>
+		<description>Early to Midday</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>6000.0</constant>
+</condition>
+<condition name="Is Raining">
+	<descriptible>
+		<nickname>Is Raining</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>7</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
+<condition name="Air 30% (S)">
+	<descriptible>
+		<nickname>Air 30% (S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>scanthousand</sheet>
+	<key>0</key>
+	<symbol>&gt;</symbol>
+	<constant>300.0</constant>
+</condition>
+<condition name="Time (0 - 22000)">
+	<descriptible>
+		<nickname>Time (0 - 22000)</nickname>
+		<description>Early to End of the night</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>22000.0</constant>
+</condition>
+<condition name="Time (0 - 14000)">
+	<descriptible>
+		<nickname>Time (0 - 14000)</nickname>
+		<description>Early to End Dusk</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>14000.0</constant>
+</condition>
+<condition name="Trees 16x16x4 (S)">
+	<descriptible>
+		<nickname>Trees 16x16x4 (S)</nickname>
+		<description>2048 blocks of leaves</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>scantotal</sheet>
+	<key>18</key>
+	<symbol>&gt;</symbol>
+	<constant>1024.0</constant>
+</condition>
+<condition name="Time (0 - 13000)">
+	<descriptible>
+		<nickname>Time (0 - 13000)</nickname>
+		<description>Early to Begin Late + Dusk x 1/2</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>13000.0</constant>
+</condition>
+<condition name="Sunlight lower than 10/15">
+	<descriptible>
+		<nickname>Sunlight lower than 10/15</nickname>
+		<description>Sunlight under 10</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>10.0</constant>
+</condition>
+<condition name="Plains 2% (S)">
+	<descriptible>
+		<nickname>Plains 2% (S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>scanthousand</sheet>
+	<key>2</key>
+	<symbol>&gt;</symbol>
+	<constant>20.0</constant>
+</condition>
+<set name="Forest">
+	<descriptible>
+		<nickname>Forest</nickname>
+		<description>The player can see a forest.</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Receive Sunlight</truepart>
+	<truepart>Air 30% (S)</truepart>
+	<truepart>Trees 16x16x4 (S)</truepart>
+	<truepart>Plains 2% (S)</truepart>
+</set>
+<set name="Time (12000 - 22000)">
+	<descriptible>
+		<nickname>Time (12000 - 22000)</nickname>
+		<description>Late to Begin Sunrise</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Time (0 - 12000)</falsepart>
+	<truepart>Time (0 - 22000)</truepart>
+</set>
+<set name="Time (14000 - 22000)">
+	<descriptible>
+		<nickname>Time (14000 - 22000)</nickname>
+		<description>Dark night</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Time (0 - 22000)</truepart>
+	<falsepart>Time (0 - 14000)</falsepart>
+</set>
+<set name="Time (0 - 6000)">
+	<descriptible>
+		<nickname>Time (0 - 6000)</nickname>
+		<description>Early to Midday</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Time (0 - 6000)</truepart>
+</set>
+<set name="Time (6000 - 12000)">
+	<descriptible>
+		<nickname>Time (6000 - 12000)</nickname>
+		<description>Midday to Late</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Time (0 - 12000)</truepart>
+	<falsepart>Time (0 - 6000)</falsepart>
+</set>
+<set name="Is Raining">
+	<descriptible>
+		<nickname>Is Raining</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Is Raining</truepart>
+</set>
+<set name="Indoor">
+	<descriptible>
+		<nickname>Indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Sunlight lower than 10/15</truepart>
+</set>
+<set name="Outdoor">
+	<descriptible>
+		<nickname>Outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Sunlight lower than 10/15</falsepart>
+</set>
+<set name="Time (22000 - 23999)">
+	<descriptible>
+		<nickname>Time (22000 - 23999)</nickname>
+		<description>Sun rising</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Time (0 - 22000)</falsepart>
+</set>
+<set name="Time (12000 - 14000)">
+	<descriptible>
+		<nickname>Time (12000 - 14000)</nickname>
+		<description>Late to Night</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Time (0 - 12000)</falsepart>
+	<truepart>Time (0 - 14000)</truepart>
+</set>
+<event name="Debugger">
+	<descriptible>
+		<nickname>Debugger</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/note/harp.ogg</path>
+	<volmin>1.0</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>1.5</pitchmin>
+	<pitchmax>1.5</pitchmax>
+	<metasound>0</metasound>
+</event>
+<event name="Birds">
+	<descriptible>
+		<nickname>Birds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/atmos_hl/wildlife/chicka1.wav</path>
+	<path>newsound/atmos_hl/wildlife/chicka2.wav</path>
+	<path>newsound/atmos_hl/wildlife/chicka3.wav</path>
+	<path>newsound/atmos_hl/wildlife/chirp1.wav</path>
+	<path>newsound/atmos_hl/wildlife/chirp2.wav</path>
+	<path>newsound/atmos_hl/wildlife/chirp3.wav</path>
+	<volmin>1.0</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>32</metasound>
+</event>
+<event name="Wind, trees">
+	<descriptible>
+		<nickname>Wind, trees</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/atmos_hl/wind/treewind1.wav</path>
+	<path>newsound/atmos_hl/wind/treewind2.wav</path>
+	<path>newsound/atmos_hl/wind/treewind3.wav</path>
+	<path>newsound/atmos_hl/wind/treewind4.wav</path>
+	<volmin>0.7</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>0</metasound>
+</event>
+<machine name="Forest during clear sky">
+	<descriptible>
+		<nickname>Forest during clear sky</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Forest</allow>
+	<restrict>Time (12000 - 22000)</restrict>
+	<restrict>Is Raining</restrict>
+	<eventtimed>
+		<eventname>Birds</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.6</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Forest wind, outdoor">
+	<descriptible>
+		<nickname>Forest wind, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Forest</allow>
+	<restrict>Is Raining</restrict>
+	<restrict>Indoor</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>6.0</delaymin>
+		<delaymax>17.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.8</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Debugger</eventname>
+		<delaymin>20000.0</delaymin>
+		<delaymax>20000.0</delaymax>
+		<delaystart>0.1</delaystart>
+		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Forest wind, indoor">
+	<descriptible>
+		<nickname>Forest wind, indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Forest</allow>
+	<restrict>Is Raining</restrict>
+	<restrict>Outdoor</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>8.0</delaymin>
+		<delaymax>24.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+</contents>
