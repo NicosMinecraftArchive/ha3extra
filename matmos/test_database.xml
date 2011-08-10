@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contents>
+<condition name="Randomlol">
+	<descriptible>
+		<nickname>Randomlol</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>instant</sheet>
+	<key>13</key>
+	<symbol>&gt;</symbol>
+	<constant>10.0</constant>
+</condition>
+<set name="Random">
+	<descriptible>
+		<nickname>Random</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Randomlol</truepart>
+</set>
+<event name="Ping">
+	<descriptible>
+		<nickname>Ping</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/note/harp.ogg</path>
+	<volmin>1.0</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>1.0</pitchmin>
+	<pitchmax>1.0</pitchmax>
+	<metasound>0</metasound>
+</event>
+<machine name="Machine">
+	<descriptible>
+		<nickname>Machine</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Random</allow>
+	<eventtimed>
+		<eventname>Ping</eventname>
+		<delaymin>10.0</delaymin>
+		<delaymax>10.0</delaymax>
+		<delaystart>1.0</delaystart>
+		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Ping</eventname>
+		<delaymin>10.0</delaymin>
+		<delaymax>10.0</delaymax>
+		<delaystart>1.5</delaystart>
+		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Ping</eventname>
+		<delaymin>10.0</delaymin>
+		<delaymax>10.0</delaymax>
+		<delaystart>2.0</delaystart>
+		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Ping</eventname>
+		<delaymin>10.0</delaymin>
+		<delaymax>10.0</delaymax>
+		<delaystart>2.35</delaystart>
+		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Ping</eventname>
+		<delaymin>10.0</delaymin>
+		<delaymax>10.0</delaymax>
+		<delaystart>2.7</delaystart>
+		<volmod>1.5</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+</contents>
