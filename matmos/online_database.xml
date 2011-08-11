@@ -63,6 +63,18 @@
 	<entry sheet="SmallScan">10</entry>
 	<entry sheet="SmallScan">11</entry>
 </dynamic>
+<condition name="In Thunderstorm">
+	<descriptible>
+		<nickname>In Thunderstorm</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>8</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
 <condition name="Sunlight lower than 5/15">
 	<descriptible>
 		<nickname>Sunlight lower than 5/15</nickname>
@@ -207,17 +219,17 @@
 	<symbol>&gt;</symbol>
 	<constant>24.0</constant>
 </condition>
-<condition name="Half-deep">
+<condition name="Deep (16)">
 	<descriptible>
-		<nickname>Half-deep</nickname>
-		<description>Altitude is highet than 32</description>
+		<nickname>Deep (16)</nickname>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
 	<sheet>Instants</sheet>
 	<key>4</key>
-	<symbol>&gt;</symbol>
-	<constant>32.0</constant>
+	<symbol>&lt;</symbol>
+	<constant>16.0</constant>
 </condition>
 <condition name="Air 30% (L)">
 	<descriptible>
@@ -231,6 +243,18 @@
 	<symbol>&gt;</symbol>
 	<constant>300.0</constant>
 </condition>
+<condition name="Time (0 - 6000)">
+	<descriptible>
+		<nickname>Time (0 - 6000)</nickname>
+		<description>Early to Midday</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>6000.0</constant>
+</condition>
 <condition name="Time (0 - 12000)">
 	<descriptible>
 		<nickname>Time (0 - 12000)</nickname>
@@ -243,17 +267,17 @@
 	<symbol>&lt;</symbol>
 	<constant>12000.0</constant>
 </condition>
-<condition name="Time (0 - 6000)">
+<condition name="Deep (32)">
 	<descriptible>
-		<nickname>Time (0 - 6000)</nickname>
-		<description>Early to Midday</description>
+		<nickname>Deep (32)</nickname>
+		<description>Altitude is highet than 32</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
 	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>6000.0</constant>
+	<key>4</key>
+	<symbol>&gt;</symbol>
+	<constant>32.0</constant>
 </condition>
 <condition name="Sunlight lower than 10/15">
 	<descriptible>
@@ -275,8 +299,8 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Rocks (24 S)</truepart>
-	<truepart>Half-deep</truepart>
 	<falsepart>Receive Sunlight</falsepart>
+	<truepart>Deep (32)</truepart>
 </set>
 <set name="Time (14000 - 22000)">
 	<descriptible>
@@ -285,8 +309,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 14000)</falsepart>
 	<truepart>Time (0 - 22000)</truepart>
+	<falsepart>Time (0 - 14000)</falsepart>
 </set>
 <set name="Time (6000 - 12000)">
 	<descriptible>
@@ -295,8 +319,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 6000)</falsepart>
 	<truepart>Time (0 - 12000)</truepart>
+	<falsepart>Time (0 - 6000)</falsepart>
 </set>
 <set name="Is Raining">
 	<descriptible>
@@ -324,6 +348,18 @@
 		<meta></meta>
 	</descriptible>
 	<falsepart>Sunlight lower than 10/15</falsepart>
+</set>
+<set name="Thunderstorm indoor">
+	<descriptible>
+		<nickname>Thunderstorm indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Sunlight lower than 5/15</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
+	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Manmade Town">
 	<descriptible>
@@ -365,6 +401,27 @@
 	</descriptible>
 	<truepart>Time (0 - 6000)</truepart>
 </set>
+<set name="Thunderstorm outdoor">
+	<descriptible>
+		<nickname>Thunderstorm outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
+</set>
+<set name="Deep cave (16)">
+	<descriptible>
+		<nickname>Deep cave (16)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Deep (16)</truepart>
+	<falsepart>Receive Sunlight</falsepart>
+</set>
 <set name="Highlands (Visible)">
 	<descriptible>
 		<nickname>Highlands (Visible)</nickname>
@@ -372,9 +429,19 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Highlands (96)</truepart>
+</set>
+<set name="Deep cave (32)">
+	<descriptible>
+		<nickname>Deep cave (32)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Receive Sunlight</falsepart>
+	<truepart>Deep (32)</truepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -395,6 +462,20 @@
 	<falsepart>Time (0 - 12000)</falsepart>
 	<truepart>Time (0 - 14000)</truepart>
 </set>
+<event name="Wind, very variable">
+	<descriptible>
+		<nickname>Wind, very variable</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/wind/windmill_wind_loop1.ogg</path>
+	<volmin>0.5</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.8</pitchmin>
+	<pitchmax>1.7</pitchmax>
+	<metasound>0</metasound>
+</event>
 <event name="Cave freightening">
 	<descriptible>
 		<nickname>Cave freightening</nickname>
@@ -414,20 +495,6 @@
 	<pitchmax>1.1</pitchmax>
 	<metasound>32</metasound>
 </event>
-<event name="Wind, very variable">
-	<descriptible>
-		<nickname>Wind, very variable</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<path>newsound/matmos_hl/wind/windmill_wind_loop1.ogg</path>
-	<volmin>0.5</volmin>
-	<volmax>1.0</volmax>
-	<pitchmin>0.8</pitchmin>
-	<pitchmax>1.7</pitchmax>
-	<metasound>0</metasound>
-</event>
 <event name="Wind, very strong">
 	<descriptible>
 		<nickname>Wind, very strong</nickname>
@@ -444,18 +511,18 @@
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
 </event>
-<event name="Wind, town">
+<event name="Debugger">
 	<descriptible>
-		<nickname>Wind, town</nickname>
+		<nickname>Debugger</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<path>newsound/matmos_hl/atmosphere/plaza_amb.ogg</path>
-	<volmin>0.5</volmin>
+	<path>newsound/note/harp.ogg</path>
+	<volmin>1.0</volmin>
 	<volmax>1.0</volmax>
-	<pitchmin>0.9</pitchmin>
-	<pitchmax>1.1</pitchmax>
+	<pitchmin>1.5</pitchmin>
+	<pitchmax>1.5</pitchmax>
 	<metasound>0</metasound>
 </event>
 <event name="Cave rumble">
@@ -474,18 +541,18 @@
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
 </event>
-<event name="Debugger">
+<event name="Wind, town">
 	<descriptible>
-		<nickname>Debugger</nickname>
+		<nickname>Wind, town</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<path>newsound/note/harp.ogg</path>
-	<volmin>1.0</volmin>
+	<path>newsound/matmos_hl/atmosphere/plaza_amb.ogg</path>
+	<volmin>0.5</volmin>
 	<volmax>1.0</volmax>
-	<pitchmin>1.5</pitchmin>
-	<pitchmax>1.5</pitchmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
 </event>
 <event name="Thunderstorm">
@@ -541,6 +608,24 @@
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
 </event>
+<machine name="Deep cave rumble (32)">
+	<descriptible>
+		<nickname>Deep cave rumble (32)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Deep cave (32)</allow>
+	<restrict>Deep cave (16)</restrict>
+	<eventtimed>
+		<eventname>Cave rumble</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>2.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.1</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Forest during clear sky">
 	<descriptible>
 		<nickname>Forest during clear sky</nickname>
@@ -557,23 +642,6 @@
 		<delaymax>9.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.6</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Rock shelter">
-	<descriptible>
-		<nickname>Rock shelter</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Rock shelter</allow>
-	<eventtimed>
-		<eventname>Cave rumble</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>2.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.05</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -604,21 +672,75 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Town">
+<machine name="Rock shelter">
 	<descriptible>
-		<nickname>Town</nickname>
+		<nickname>Rock shelter</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<allow>Manmade Town</allow>
-	<restrict>Is Raining</restrict>
+	<allow>Rock shelter</allow>
+	<restrict>Deep cave (16)</restrict>
+	<restrict>Deep cave (32)</restrict>
 	<eventtimed>
-		<eventname>Wind, town</eventname>
-		<delaymin>7.0</delaymin>
-		<delaymax>7.0</delaymax>
+		<eventname>Cave rumble</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>2.0</delaymax>
 		<delaystart>0.0</delaystart>
-		<volmod>0.1</volmod>
+		<volmod>0.05</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Freightening cave">
+	<descriptible>
+		<nickname>Freightening cave</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Deep cave (32)</allow>
+	<eventtimed>
+		<eventname>Cave freightening</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>32.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Thunderstorm outdoor">
+	<descriptible>
+		<nickname>Thunderstorm outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Thunderstorm outdoor</allow>
+	<eventtimed>
+		<eventname>Thunderstorm</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>32.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.7</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Forest wind, indoor">
+	<descriptible>
+		<nickname>Forest wind, indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Forest</allow>
+	<restrict>Is Raining</restrict>
+	<restrict>Outdoor</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>8.0</delaymin>
+		<delaymax>24.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -648,20 +770,53 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Forest wind, indoor">
+<machine name="Town">
 	<descriptible>
-		<nickname>Forest wind, indoor</nickname>
+		<nickname>Town</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<allow>Forest</allow>
+	<allow>Manmade Town</allow>
 	<restrict>Is Raining</restrict>
-	<restrict>Outdoor</restrict>
 	<eventtimed>
-		<eventname>Wind, trees</eventname>
-		<delaymin>8.0</delaymin>
-		<delaymax>24.0</delaymax>
+		<eventname>Wind, town</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>7.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.1</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Deep cave rumble (16)">
+	<descriptible>
+		<nickname>Deep cave rumble (16)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Deep cave (16)</allow>
+	<eventtimed>
+		<eventname>Cave rumble</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>2.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Thunderstorm indoor">
+	<descriptible>
+		<nickname>Thunderstorm indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Thunderstorm indoor</allow>
+	<eventtimed>
+		<eventname>Thunderstorm</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>32.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.3</volmod>
 		<pitchmod>1.0</pitchmod>
