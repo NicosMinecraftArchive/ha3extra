@@ -171,18 +171,6 @@
 	<symbol>&lt;</symbol>
 	<constant>14000.0</constant>
 </condition>
-<condition name="Trees 16x16x4 (L)">
-	<descriptible>
-		<nickname>Trees 16x16x4 (L)</nickname>
-		<description>2048 blocks of leaves</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScan</sheet>
-	<key>18</key>
-	<symbol>&gt;</symbol>
-	<constant>1024.0</constant>
-</condition>
 <condition name="Manmade Town">
 	<descriptible>
 		<nickname>Manmade Town</nickname>
@@ -303,6 +291,18 @@
 	<symbol>&gt;</symbol>
 	<constant>30.0</constant>
 </condition>
+<condition name="Trees 512 (L)">
+	<descriptible>
+		<nickname>Trees 512 (L)</nickname>
+		<description>2048 blocks of leaves</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScan</sheet>
+	<key>18</key>
+	<symbol>&gt;</symbol>
+	<constant>512.0</constant>
+</condition>
 <condition name="Deep (32)">
 	<descriptible>
 		<nickname>Deep (32)</nickname>
@@ -386,6 +386,7 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Receive Sunlight</truepart>
 	<truepart>Sunlight lower than 10/15</truepart>
 </set>
 <set name="Outdoor">
@@ -530,7 +531,7 @@
 	<truepart>Plains 1% (L)</truepart>
 	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
-	<truepart>Trees 16x16x4 (L)</truepart>
+	<truepart>Trees 512 (L)</truepart>
 </set>
 <set name="Big fire, Not Nether">
 	<descriptible>
@@ -822,8 +823,8 @@
 		<meta></meta>
 	</descriptible>
 	<path>newsound/matmos_hl/atmosphere/plaza_amb.ogg</path>
-	<volmin>0.5</volmin>
-	<volmax>1.0</volmax>
+	<volmin>0.2</volmin>
+	<volmax>0.6</volmax>
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
@@ -1039,6 +1040,34 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
+<machine name="Plains Empty wind, outdoor">
+	<descriptible>
+		<nickname>Plains Empty wind, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Forest</restrict>
+	<restrict>Is Raining</restrict>
+	<restrict>Indoor</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.2</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Wind, very strong</eventname>
+		<delaymin>1.0</delaymin>
+		<delaymax>2.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.2</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Thunderstorm outdoor">
 	<descriptible>
 		<nickname>Thunderstorm outdoor</nickname>
@@ -1097,7 +1126,7 @@
 		<delaymin>1.0</delaymin>
 		<delaymax>2.5</delaymax>
 		<delaystart>0.0</delaystart>
-		<volmod>1.0</volmod>
+		<volmod>0.7</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1115,7 +1144,7 @@
 		<delaymin>7.0</delaymin>
 		<delaymax>7.0</delaymax>
 		<delaystart>1.0</delaystart>
-		<volmod>0.1</volmod>
+		<volmod>0.05</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1133,6 +1162,34 @@
 		<delaymax>2.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Plains Empty wind, indoor">
+	<descriptible>
+		<nickname>Plains Empty wind, indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Outdoor</restrict>
+	<restrict>Forest</restrict>
+	<restrict>Is Raining</restrict>
+	<eventtimed>
+		<eventname>Wind, very strong</eventname>
+		<delaymin>1.0</delaymin>
+		<delaymax>2.5</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.02</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.02</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
