@@ -87,6 +87,18 @@
 	<symbol>&gt;</symbol>
 	<constant>0.0</constant>
 </condition>
+<condition name="Plains 2% (L)">
+	<descriptible>
+		<nickname>Plains 2% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>2</key>
+	<symbol>&gt;</symbol>
+	<constant>20.0</constant>
+</condition>
 <condition name="Is Raining">
 	<descriptible>
 		<nickname>Is Raining</nickname>
@@ -135,6 +147,18 @@
 	<symbol>!=</symbol>
 	<constant>0.0</constant>
 </condition>
+<condition name="Trees 16x16x4 (L)">
+	<descriptible>
+		<nickname>Trees 16x16x4 (L)</nickname>
+		<description>2048 blocks of leaves</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScan</sheet>
+	<key>18</key>
+	<symbol>&gt;</symbol>
+	<constant>1024.0</constant>
+</condition>
 <condition name="Time (0 - 13000)">
 	<descriptible>
 		<nickname>Time (0 - 13000)</nickname>
@@ -159,18 +183,6 @@
 	<symbol>&gt;</symbol>
 	<constant>64.0</constant>
 </condition>
-<condition name="Plains 2% (S)">
-	<descriptible>
-		<nickname>Plains 2% (S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScanPerMil</sheet>
-	<key>2</key>
-	<symbol>&gt;</symbol>
-	<constant>20.0</constant>
-</condition>
 <condition name="Highlands (96)">
 	<descriptible>
 		<nickname>Highlands (96)</nickname>
@@ -182,6 +194,42 @@
 	<key>4</key>
 	<symbol>&gt;</symbol>
 	<constant>96.0</constant>
+</condition>
+<condition name="Rocks (24 S)">
+	<descriptible>
+		<nickname>Rocks (24 S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<key>-1</key>
+	<dynamickey>Rocks (T Small)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>24.0</constant>
+</condition>
+<condition name="Half-deep">
+	<descriptible>
+		<nickname>Half-deep</nickname>
+		<description>Altitude is highet than 32</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>4</key>
+	<symbol>&gt;</symbol>
+	<constant>32.0</constant>
+</condition>
+<condition name="Air 30% (L)">
+	<descriptible>
+		<nickname>Air 30% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>0</key>
+	<symbol>&gt;</symbol>
+	<constant>300.0</constant>
 </condition>
 <condition name="Time (0 - 12000)">
 	<descriptible>
@@ -207,30 +255,6 @@
 	<symbol>&lt;</symbol>
 	<constant>6000.0</constant>
 </condition>
-<condition name="Air 30% (S)">
-	<descriptible>
-		<nickname>Air 30% (S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScanPerMil</sheet>
-	<key>0</key>
-	<symbol>&gt;</symbol>
-	<constant>300.0</constant>
-</condition>
-<condition name="Trees 16x16x4 (S)">
-	<descriptible>
-		<nickname>Trees 16x16x4 (S)</nickname>
-		<description>2048 blocks of leaves</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScan</sheet>
-	<key>18</key>
-	<symbol>&gt;</symbol>
-	<constant>1024.0</constant>
-</condition>
 <condition name="Sunlight lower than 10/15">
 	<descriptible>
 		<nickname>Sunlight lower than 10/15</nickname>
@@ -243,6 +267,17 @@
 	<symbol>&lt;</symbol>
 	<constant>10.0</constant>
 </condition>
+<set name="Rock shelter">
+	<descriptible>
+		<nickname>Rock shelter</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Rocks (24 S)</truepart>
+	<truepart>Half-deep</truepart>
+	<falsepart>Receive Sunlight</falsepart>
+</set>
 <set name="Time (14000 - 22000)">
 	<descriptible>
 		<nickname>Time (14000 - 22000)</nickname>
@@ -306,10 +341,10 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
-	<truepart>Air 30% (S)</truepart>
-	<truepart>Trees 16x16x4 (S)</truepart>
-	<truepart>Plains 2% (S)</truepart>
+	<truepart>Plains 2% (L)</truepart>
+	<truepart>Trees 16x16x4 (L)</truepart>
 </set>
 <set name="Time (12000 - 22000)">
 	<descriptible>
@@ -337,8 +372,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Air 30% (L)</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>Air 30% (S)</truepart>
 	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Time (22000 - 23999)">
@@ -403,9 +438,23 @@
 	<path>newsound/matmos_hl/wind/wind_hit1.ogg</path>
 	<path>newsound/matmos_hl/wind/wind_hit2.ogg</path>
 	<path>newsound/matmos_hl/wind/wind_hit3.ogg</path>
-	<volmin>0.6</volmin>
+	<volmin>1.0</volmin>
 	<volmax>1.0</volmax>
 	<pitchmin>0.8</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>0</metasound>
+</event>
+<event name="Wind, town">
+	<descriptible>
+		<nickname>Wind, town</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/atmosphere/plaza_amb.ogg</path>
+	<volmin>0.5</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
 </event>
@@ -511,6 +560,23 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
+<machine name="Rock shelter">
+	<descriptible>
+		<nickname>Rock shelter</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Rock shelter</allow>
+	<eventtimed>
+		<eventname>Cave rumble</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>2.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.05</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Forest wind, outdoor">
 	<descriptible>
 		<nickname>Forest wind, outdoor</nickname>
@@ -535,6 +601,24 @@
 		<delaymax>20000.0</delaymax>
 		<delaystart>0.1</delaystart>
 		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Town">
+	<descriptible>
+		<nickname>Town</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Manmade Town</allow>
+	<restrict>Is Raining</restrict>
+	<eventtimed>
+		<eventname>Wind, town</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>7.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.1</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
