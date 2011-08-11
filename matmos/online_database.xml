@@ -324,7 +324,7 @@
 	</descriptible>
 	<sheet>Instants</sheet>
 	<key>4</key>
-	<symbol>&gt;</symbol>
+	<symbol>&lt;</symbol>
 	<constant>32.0</constant>
 </condition>
 <condition name="Is Nether">
@@ -380,7 +380,7 @@
 	</descriptible>
 	<truepart>Rocks (24 S)</truepart>
 	<falsepart>Receive Sunlight</falsepart>
-	<truepart>Deep (32)</truepart>
+	<falsepart>Deep (32)</falsepart>
 </set>
 <set name="Indoor">
 	<descriptible>
