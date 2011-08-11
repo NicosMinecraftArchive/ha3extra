@@ -63,29 +63,17 @@
 	<entry sheet="SmallScan">10</entry>
 	<entry sheet="SmallScan">11</entry>
 </dynamic>
-<condition name="Nearby fire (1)">
+<condition name="Sunlight lower than 5/15">
 	<descriptible>
-		<nickname>Nearby fire (1)</nickname>
+		<nickname>Sunlight lower than 5/15</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>SmallScan</sheet>
-	<key>51</key>
-	<symbol>&gt;</symbol>
-	<constant>0.0</constant>
-</condition>
-<condition name="Air is tight 35% (S)">
-	<descriptible>
-		<nickname>Air is tight 35% (S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>SmallScanPerMil</sheet>
+	<sheet>Instants</sheet>
 	<key>0</key>
 	<symbol>&lt;</symbol>
-	<constant>350.0</constant>
+	<constant>5.0</constant>
 </condition>
 <condition name="In Thunderstorm">
 	<descriptible>
@@ -99,18 +87,6 @@
 	<symbol>==</symbol>
 	<constant>1.0</constant>
 </condition>
-<condition name="Sunlight lower than 5/15">
-	<descriptible>
-		<nickname>Sunlight lower than 5/15</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>0</key>
-	<symbol>&lt;</symbol>
-	<constant>5.0</constant>
-</condition>
 <condition name="Receive Sunlight">
 	<descriptible>
 		<nickname>Receive Sunlight</nickname>
@@ -123,18 +99,6 @@
 	<symbol>&gt;</symbol>
 	<constant>0.0</constant>
 </condition>
-<condition name="Nearby fire (7)">
-	<descriptible>
-		<nickname>Nearby fire (7)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>SmallScan</sheet>
-	<key>51</key>
-	<symbol>&gt;</symbol>
-	<constant>6.0</constant>
-</condition>
 <condition name="Is Raining">
 	<descriptible>
 		<nickname>Is Raining</nickname>
@@ -146,18 +110,6 @@
 	<key>7</key>
 	<symbol>==</symbol>
 	<constant>1.0</constant>
-</condition>
-<condition name="Time (0 - 22000)">
-	<descriptible>
-		<nickname>Time (0 - 22000)</nickname>
-		<description>Early to End of the night</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>22000.0</constant>
 </condition>
 <condition name="Time (0 - 14000)">
 	<descriptible>
@@ -183,54 +135,6 @@
 	<symbol>&gt;</symbol>
 	<constant>64.0</constant>
 </condition>
-<condition name="Time (0 - 13000)">
-	<descriptible>
-		<nickname>Time (0 - 13000)</nickname>
-		<description>Early to Begin Late + Dusk x 1/2</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>13000.0</constant>
-</condition>
-<condition name="Highlands (96)">
-	<descriptible>
-		<nickname>Highlands (96)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>4</key>
-	<symbol>&gt;</symbol>
-	<constant>96.0</constant>
-</condition>
-<condition name="Plains 1% (L)">
-	<descriptible>
-		<nickname>Plains 1% (L)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScanPerMil</sheet>
-	<key>2</key>
-	<symbol>&gt;</symbol>
-	<constant>10.0</constant>
-</condition>
-<condition name="Rocks (24 S)">
-	<descriptible>
-		<nickname>Rocks (24 S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<key>-1</key>
-	<dynamickey>Rocks (T Small)</dynamickey>
-	<symbol>&gt;</symbol>
-	<constant>24.0</constant>
-</condition>
 <condition name="Deep (16)">
 	<descriptible>
 		<nickname>Deep (16)</nickname>
@@ -255,18 +159,6 @@
 	<symbol>&gt;</symbol>
 	<constant>300.0</constant>
 </condition>
-<condition name="Time (0 - 6000)">
-	<descriptible>
-		<nickname>Time (0 - 6000)</nickname>
-		<description>Early to Midday</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>6000.0</constant>
-</condition>
 <condition name="Time (0 - 12000)">
 	<descriptible>
 		<nickname>Time (0 - 12000)</nickname>
@@ -278,6 +170,162 @@
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>12000.0</constant>
+</condition>
+<condition name="Sunlight lower than 10/15">
+	<descriptible>
+		<nickname>Sunlight lower than 10/15</nickname>
+		<description>Sunlight under 10</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>10.0</constant>
+</condition>
+<condition name="Nearby fire (1)">
+	<descriptible>
+		<nickname>Nearby fire (1)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScan</sheet>
+	<key>51</key>
+	<symbol>&gt;</symbol>
+	<constant>0.0</constant>
+</condition>
+<condition name="Air is tight 35% (S)">
+	<descriptible>
+		<nickname>Air is tight 35% (S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScanPerMil</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>350.0</constant>
+</condition>
+<condition name="Is Underwater">
+	<descriptible>
+		<nickname>Is Underwater</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>6</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
+<condition name="Nearby fire (7)">
+	<descriptible>
+		<nickname>Nearby fire (7)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScan</sheet>
+	<key>51</key>
+	<symbol>&gt;</symbol>
+	<constant>6.0</constant>
+</condition>
+<condition name="Time (0 - 22000)">
+	<descriptible>
+		<nickname>Time (0 - 22000)</nickname>
+		<description>Early to End of the night</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>22000.0</constant>
+</condition>
+<condition name="Time (0 - 13000)">
+	<descriptible>
+		<nickname>Time (0 - 13000)</nickname>
+		<description>Early to Begin Late + Dusk x 1/2</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>13000.0</constant>
+</condition>
+<condition name="Highlands (96)">
+	<descriptible>
+		<nickname>Highlands (96)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>4</key>
+	<symbol>&gt;</symbol>
+	<constant>96.0</constant>
+</condition>
+<condition name="Rocks (24 S)">
+	<descriptible>
+		<nickname>Rocks (24 S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<key>-1</key>
+	<dynamickey>Rocks (T Small)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>24.0</constant>
+</condition>
+<condition name="Plains 1% (L)">
+	<descriptible>
+		<nickname>Plains 1% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>2</key>
+	<symbol>&gt;</symbol>
+	<constant>10.0</constant>
+</condition>
+<condition name="Nearby water">
+	<descriptible>
+		<nickname>Nearby water</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<key>-1</key>
+	<dynamickey>Water (T Small)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>4.0</constant>
+</condition>
+<condition name="Sea water">
+	<descriptible>
+		<nickname>Sea water</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>9</key>
+	<symbol>&gt;</symbol>
+	<constant>100.0</constant>
+</condition>
+<condition name="Time (0 - 6000)">
+	<descriptible>
+		<nickname>Time (0 - 6000)</nickname>
+		<description>Early to Midday</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>6000.0</constant>
 </condition>
 <condition name="Big fire">
 	<descriptible>
@@ -314,18 +362,6 @@
 	<key>4</key>
 	<symbol>&lt;</symbol>
 	<constant>32.0</constant>
-</condition>
-<condition name="Sunlight lower than 10/15">
-	<descriptible>
-		<nickname>Sunlight lower than 10/15</nickname>
-		<description>Sunlight under 10</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>0</key>
-	<symbol>&lt;</symbol>
-	<constant>10.0</constant>
 </condition>
 <condition name="Is Nether">
 	<descriptible>
@@ -467,6 +503,15 @@
 	</descriptible>
 	<falsepart>Time (0 - 22000)</falsepart>
 </set>
+<set name="Is Underwater">
+	<descriptible>
+		<nickname>Is Underwater</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Is Underwater</truepart>
+</set>
 <set name="Digging unsafely in Nether">
 	<descriptible>
 		<nickname>Digging unsafely in Nether</nickname>
@@ -543,6 +588,15 @@
 	<truepart>Big fire</truepart>
 	<falsepart>Is Nether</falsepart>
 </set>
+<set name="Nearby water">
+	<descriptible>
+		<nickname>Nearby water</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Nearby water</truepart>
+</set>
 <set name="Time (12000 - 22000)">
 	<descriptible>
 		<nickname>Time (12000 - 22000)</nickname>
@@ -561,6 +615,15 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Time (0 - 6000)</truepart>
+</set>
+<set name="Abundant water">
+	<descriptible>
+		<nickname>Abundant water</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Sea water</truepart>
 </set>
 <set name="In Nether">
 	<descriptible>
@@ -690,7 +753,7 @@
 		<meta></meta>
 	</descriptible>
 	<path>newsound/matmos_hl/atmosphere/flame_thrower_fire_hit.ogg</path>
-	<volmin>0.5</volmin>
+	<volmin>1.0</volmin>
 	<volmax>0.7</volmax>
 	<pitchmin>0.7</pitchmin>
 	<pitchmax>0.9</pitchmax>
@@ -852,6 +915,22 @@
 	<pitchmax>1.1</pitchmax>
 	<metasound>32</metasound>
 </event>
+<event name="Lake">
+	<descriptible>
+		<nickname>Lake</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/water/lake1.ogg</path>
+	<path>newsound/matmos_hl/water/lake2.ogg</path>
+	<path>newsound/matmos_hl/water/lake3.ogg</path>
+	<volmin>0.5</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.3</pitchmax>
+	<metasound>0</metasound>
+</event>
 <event name="Bad wind">
 	<descriptible>
 		<nickname>Bad wind</nickname>
@@ -914,6 +993,7 @@
 	<restrict>Time (6000 - 12000)</restrict>
 	<restrict>Time (22000 - 23999)</restrict>
 	<restrict>Time (0 - 6000)</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Nightbirds</eventname>
 		<delaymin>0.5</delaymin>
@@ -933,6 +1013,7 @@
 	<allow>Forest</allow>
 	<restrict>Is Raining</restrict>
 	<restrict>Indoor</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Wind, trees</eventname>
 		<delaymin>6.0</delaymin>
@@ -1015,6 +1096,24 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
+<machine name="Water">
+	<descriptible>
+		<nickname>Water</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Abundant water</allow>
+	<allow>Nearby water</allow>
+	<eventtimed>
+		<eventname>Lake</eventname>
+		<delaymin>6.0</delaymin>
+		<delaymax>6.0</delaymax>
+		<delaystart>1.0</delaystart>
+		<volmod>0.6</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Digging unsafely in the Nether">
 	<descriptible>
 		<nickname>Digging unsafely in the Nether</nickname>
@@ -1051,6 +1150,7 @@
 	<restrict>Forest</restrict>
 	<restrict>Is Raining</restrict>
 	<restrict>Indoor</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Wind, trees</eventname>
 		<delaymin>2.0</delaymin>
@@ -1095,6 +1195,7 @@
 	<allow>Forest</allow>
 	<restrict>Is Raining</restrict>
 	<restrict>Outdoor</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Wind, trees</eventname>
 		<delaymin>8.0</delaymin>
@@ -1113,6 +1214,7 @@
 	</descriptible>
 	<allow>Highlands (Visible)</allow>
 	<restrict>Manmade Town</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Wind, trees</eventname>
 		<delaymin>2.0</delaymin>
@@ -1176,6 +1278,7 @@
 	<restrict>Outdoor</restrict>
 	<restrict>Forest</restrict>
 	<restrict>Is Raining</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Wind, very strong</eventname>
 		<delaymin>1.0</delaymin>
@@ -1203,6 +1306,7 @@
 	<allow>Plains</allow>
 	<restrict>Time (12000 - 22000)</restrict>
 	<restrict>Is Raining</restrict>
+	<restrict>Is Underwater</restrict>
 	<eventtimed>
 		<eventname>Birds</eventname>
 		<delaymin>2.0</delaymin>
