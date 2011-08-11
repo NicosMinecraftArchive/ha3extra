@@ -183,18 +183,6 @@
 	<symbol>&lt;</symbol>
 	<constant>14000.0</constant>
 </condition>
-<condition name="Hourclock">
-	<descriptible>
-		<nickname>Hourclock</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>SpecialLarge</sheet>
-	<key>0</key>
-	<symbol>!=</symbol>
-	<constant>0.0</constant>
-</condition>
 <condition name="Trees 16x16x4 (L)">
 	<descriptible>
 		<nickname>Trees 16x16x4 (L)</nickname>
@@ -207,18 +195,6 @@
 	<symbol>&gt;</symbol>
 	<constant>1024.0</constant>
 </condition>
-<condition name="Time (0 - 13000)">
-	<descriptible>
-		<nickname>Time (0 - 13000)</nickname>
-		<description>Early to Begin Late + Dusk x 1/2</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>13000.0</constant>
-</condition>
 <condition name="Manmade Town">
 	<descriptible>
 		<nickname>Manmade Town</nickname>
@@ -230,6 +206,18 @@
 	<dynamickey>Manmade Common (T Small)</dynamickey>
 	<symbol>&gt;</symbol>
 	<constant>64.0</constant>
+</condition>
+<condition name="Time (0 - 13000)">
+	<descriptible>
+		<nickname>Time (0 - 13000)</nickname>
+		<description>Early to Begin Late + Dusk x 1/2</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>13000.0</constant>
 </condition>
 <condition name="Highlands (96)">
 	<descriptible>
@@ -279,18 +267,6 @@
 	<symbol>&gt;</symbol>
 	<constant>300.0</constant>
 </condition>
-<condition name="Time (0 - 12000)">
-	<descriptible>
-		<nickname>Time (0 - 12000)</nickname>
-		<description>Early to Begin Late</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>12000.0</constant>
-</condition>
 <condition name="Time (0 - 6000)">
 	<descriptible>
 		<nickname>Time (0 - 6000)</nickname>
@@ -302,6 +278,18 @@
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>6000.0</constant>
+</condition>
+<condition name="Time (0 - 12000)">
+	<descriptible>
+		<nickname>Time (0 - 12000)</nickname>
+		<description>Early to Begin Late</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>12000.0</constant>
 </condition>
 <condition name="Big fire">
 	<descriptible>
@@ -327,18 +315,6 @@
 	<symbol>&lt;</symbol>
 	<constant>32.0</constant>
 </condition>
-<condition name="Is Nether">
-	<descriptible>
-		<nickname>Is Nether</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>10</key>
-	<symbol>==</symbol>
-	<constant>1.0</constant>
-</condition>
 <condition name="Sunlight lower than 10/15">
 	<descriptible>
 		<nickname>Sunlight lower than 10/15</nickname>
@@ -351,6 +327,18 @@
 	<symbol>&lt;</symbol>
 	<constant>10.0</constant>
 </condition>
+<condition name="Is Nether">
+	<descriptible>
+		<nickname>Is Nether</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>10</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
 <set name="Digging in the Nether">
 	<descriptible>
 		<nickname>Digging in the Nether</nickname>
@@ -360,16 +348,6 @@
 	</descriptible>
 	<truepart>Rocks (24 S)</truepart>
 	<truepart>Is Nether</truepart>
-</set>
-<set name="Time (14000 - 22000)">
-	<descriptible>
-		<nickname>Time (14000 - 22000)</nickname>
-		<description>Dark night</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<falsepart>Time (0 - 14000)</falsepart>
-	<truepart>Time (0 - 22000)</truepart>
 </set>
 <set name="Rock shelter">
 	<descriptible>
@@ -382,14 +360,15 @@
 	<falsepart>Receive Sunlight</falsepart>
 	<falsepart>Deep (32)</falsepart>
 </set>
-<set name="Indoor">
+<set name="Time (14000 - 22000)">
 	<descriptible>
-		<nickname>Indoor</nickname>
-		<description></description>
+		<nickname>Time (14000 - 22000)</nickname>
+		<description>Dark night</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Sunlight lower than 10/15</truepart>
+	<truepart>Time (0 - 22000)</truepart>
+	<falsepart>Time (0 - 14000)</falsepart>
 </set>
 <set name="Is Raining">
 	<descriptible>
@@ -399,6 +378,15 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Is Raining</truepart>
+</set>
+<set name="Indoor">
+	<descriptible>
+		<nickname>Indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Sunlight lower than 10/15</truepart>
 </set>
 <set name="Outdoor">
 	<descriptible>
@@ -435,9 +423,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
 </set>
 <set name="Nearby fire (1) Dimensions">
 	<descriptible>
@@ -448,17 +436,6 @@
 	</descriptible>
 	<truepart>Nearby fire (1)</truepart>
 </set>
-<set name="Highlands (Visible)">
-	<descriptible>
-		<nickname>Highlands (Visible)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>Highlands (96)</truepart>
-</set>
 <set name="Digging safely in Nether">
 	<descriptible>
 		<nickname>Digging safely in Nether</nickname>
@@ -468,6 +445,17 @@
 	</descriptible>
 	<truepart>Air is tight 35% (S)</truepart>
 	<truepart>Is Nether</truepart>
+</set>
+<set name="Highlands (Visible)">
+	<descriptible>
+		<nickname>Highlands (Visible)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Air 30% (L)</truepart>
+	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -495,8 +483,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 6000)</falsepart>
 	<truepart>Time (0 - 12000)</truepart>
+	<falsepart>Time (0 - 6000)</falsepart>
 </set>
 <set name="Big fire, In Nether">
 	<descriptible>
@@ -509,6 +497,17 @@
 	<truepart>Big fire</truepart>
 	<truepart>Is Nether</truepart>
 </set>
+<set name="Plains">
+	<descriptible>
+		<nickname>Plains</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Air 30% (L)</truepart>
+	<truepart>Receive Sunlight</truepart>
+	<truepart>Plains 2% (L)</truepart>
+</set>
 <set name="Thunderstorm indoor">
 	<descriptible>
 		<nickname>Thunderstorm indoor</nickname>
@@ -516,9 +515,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Sunlight lower than 5/15</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Forest">
@@ -612,6 +611,27 @@
 	<falsepart>Time (0 - 12000)</falsepart>
 	<truepart>Time (0 - 14000)</truepart>
 </set>
+<event name="Nightbirds">
+	<descriptible>
+		<nickname>Nightbirds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/wildlife/critter1.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter2.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter3.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter4.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter5.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter6.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter7.ogg</path>
+	<path>newsound/matmos_hl/wildlife/critter8.ogg</path>
+	<volmin>0.5</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>1.0</pitchmin>
+	<pitchmax>1.0</pitchmax>
+	<metasound>32</metasound>
+</event>
 <event name="Wind, very variable">
 	<descriptible>
 		<nickname>Wind, very variable</nickname>
@@ -639,8 +659,8 @@
 	<path>newsound/matmos_hl/atmosphere/cave_hit4.ogg</path>
 	<path>newsound/matmos_hl/atmosphere/cave_hit5.ogg</path>
 	<path>newsound/matmos_hl/atmosphere/cave_hit6.ogg</path>
-	<volmin>1.0</volmin>
-	<volmax>1.0</volmax>
+	<volmin>0.5</volmin>
+	<volmax>0.7</volmax>
 	<pitchmin>0.7</pitchmin>
 	<pitchmax>1.1</pitchmax>
 	<metasound>32</metasound>
@@ -669,8 +689,8 @@
 		<meta></meta>
 	</descriptible>
 	<path>newsound/matmos_hl/atmosphere/flame_thrower_fire_hit.ogg</path>
-	<volmin>1.0</volmin>
-	<volmax>1.0</volmax>
+	<volmin>0.5</volmin>
+	<volmax>0.7</volmax>
 	<pitchmin>0.7</pitchmin>
 	<pitchmax>0.9</pitchmax>
 	<metasound>0</metasound>
@@ -685,8 +705,8 @@
 	<path>newsound/matmos_hl/cave/rumble1.ogg</path>
 	<path>newsound/matmos_hl/cave/rumble2.ogg</path>
 	<path>newsound/matmos_hl/cave/rumble3.ogg</path>
-	<volmin>0.7</volmin>
-	<volmax>1.0</volmax>
+	<volmin>0.3</volmin>
+	<volmax>0.6</volmax>
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
@@ -703,7 +723,7 @@
 	<path>newsound/matmos_hl/weather/thunder3.ogg</path>
 	<path>newsound/matmos_hl/weather/thunder4.ogg</path>
 	<volmin>0.4</volmin>
-	<volmax>1.0</volmax>
+	<volmax>0.7</volmax>
 	<pitchmin>0.7</pitchmin>
 	<pitchmax>1.2</pitchmax>
 	<metasound>32</metasound>
@@ -756,7 +776,7 @@
 	</descriptible>
 	<path>newsound/matmos_hl/atmosphere/flame_thrower_fire_hit.ogg</path>
 	<volmin>0.5</volmin>
-	<volmax>1.0</volmax>
+	<volmax>0.7</volmax>
 	<pitchmin>0.3</pitchmin>
 	<pitchmax>0.5</pitchmax>
 	<metasound>0</metasound>
@@ -774,8 +794,8 @@
 	<path>newsound/matmos_hl/atmosphere/cave_hit4.ogg</path>
 	<path>newsound/matmos_hl/atmosphere/cave_hit5.ogg</path>
 	<path>newsound/matmos_hl/atmosphere/cave_hit6.ogg</path>
-	<volmin>1.0</volmin>
-	<volmax>1.0</volmax>
+	<volmin>0.5</volmin>
+	<volmax>0.7</volmax>
 	<pitchmin>0.4</pitchmin>
 	<pitchmax>0.9</pitchmax>
 	<metasound>32</metasound>
@@ -821,7 +841,11 @@
 	<path>newsound/matmos_hl/wildlife/chirp1.ogg</path>
 	<path>newsound/matmos_hl/wildlife/chirp2.ogg</path>
 	<path>newsound/matmos_hl/wildlife/chirp3.ogg</path>
-	<volmin>1.0</volmin>
+	<path>newsound/matmos_hl/wildlife/flit1.ogg</path>
+	<path>newsound/matmos_hl/wildlife/squeek1.ogg</path>
+	<path>newsound/matmos_hl/wildlife/squeek2.ogg</path>
+	<path>newsound/matmos_hl/wildlife/squeek3.ogg</path>
+	<volmin>0.6</volmin>
 	<volmax>1.0</volmax>
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
@@ -875,6 +899,26 @@
 		<delaymax>3.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.05</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Nightbirds">
+	<descriptible>
+		<nickname>Nightbirds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Time (6000 - 12000)</restrict>
+	<restrict>Time (22000 - 23999)</restrict>
+	<restrict>Time (0 - 6000)</restrict>
+	<eventtimed>
+		<eventname>Nightbirds</eventname>
+		<delaymin>0.5</delaymin>
+		<delaymax>6.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.5</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -967,25 +1011,6 @@
 		<delaymax>32.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.3</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Forest during clear sky">
-	<descriptible>
-		<nickname>Forest during clear sky</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Forest</allow>
-	<restrict>Time (12000 - 22000)</restrict>
-	<restrict>Is Raining</restrict>
-	<eventtimed>
-		<eventname>Birds</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>9.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.6</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1089,7 +1114,7 @@
 		<eventname>Wind, town</eventname>
 		<delaymin>7.0</delaymin>
 		<delaymax>7.0</delaymax>
-		<delaystart>0.0</delaystart>
+		<delaystart>1.0</delaystart>
 		<volmod>0.1</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
@@ -1108,6 +1133,25 @@
 		<delaymax>2.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Birds">
+	<descriptible>
+		<nickname>Birds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Time (12000 - 22000)</restrict>
+	<restrict>Is Raining</restrict>
+	<eventtimed>
+		<eventname>Nightbirds</eventname>
+		<delaymin>1.0</delaymin>
+		<delaymax>8.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.6</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
