@@ -135,18 +135,6 @@
 	<symbol>&gt;</symbol>
 	<constant>6.0</constant>
 </condition>
-<condition name="Plains 2% (L)">
-	<descriptible>
-		<nickname>Plains 2% (L)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScanPerMil</sheet>
-	<key>2</key>
-	<symbol>&gt;</symbol>
-	<constant>20.0</constant>
-</condition>
 <condition name="Is Raining">
 	<descriptible>
 		<nickname>Is Raining</nickname>
@@ -230,6 +218,18 @@
 	<key>4</key>
 	<symbol>&gt;</symbol>
 	<constant>96.0</constant>
+</condition>
+<condition name="Plains 1% (L)">
+	<descriptible>
+		<nickname>Plains 1% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>2</key>
+	<symbol>&gt;</symbol>
+	<constant>10.0</constant>
 </condition>
 <condition name="Rocks (24 S)">
 	<descriptible>
@@ -504,9 +504,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Plains 1% (L)</truepart>
 	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
-	<truepart>Plains 2% (L)</truepart>
 </set>
 <set name="Thunderstorm indoor">
 	<descriptible>
@@ -527,9 +527,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Plains 1% (L)</truepart>
 	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
-	<truepart>Plains 2% (L)</truepart>
 	<truepart>Trees 16x16x4 (L)</truepart>
 </set>
 <set name="Big fire, Not Nether">
@@ -1147,9 +1147,9 @@
 	<restrict>Time (12000 - 22000)</restrict>
 	<restrict>Is Raining</restrict>
 	<eventtimed>
-		<eventname>Nightbirds</eventname>
-		<delaymin>1.0</delaymin>
-		<delaymax>8.0</delaymax>
+		<eventname>Birds</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.6</volmod>
 		<pitchmod>1.0</pitchmod>
