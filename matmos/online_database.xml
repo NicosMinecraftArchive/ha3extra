@@ -7,19 +7,19 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<entry sheet="smalltotal">4</entry>
-	<entry sheet="smalltotal">5</entry>
-	<entry sheet="smalltotal">35</entry>
-	<entry sheet="smalltotal">41</entry>
-	<entry sheet="smalltotal">42</entry>
-	<entry sheet="smalltotal">44</entry>
-	<entry sheet="smalltotal">43</entry>
-	<entry sheet="smalltotal">45</entry>
-	<entry sheet="smalltotal">47</entry>
-	<entry sheet="smalltotal">53</entry>
-	<entry sheet="smalltotal">57</entry>
-	<entry sheet="smalltotal">67</entry>
-	<entry sheet="smalltotal">24</entry>
+	<entry sheet="SmallScan">4</entry>
+	<entry sheet="SmallScan">5</entry>
+	<entry sheet="SmallScan">35</entry>
+	<entry sheet="SmallScan">41</entry>
+	<entry sheet="SmallScan">42</entry>
+	<entry sheet="SmallScan">44</entry>
+	<entry sheet="SmallScan">43</entry>
+	<entry sheet="SmallScan">45</entry>
+	<entry sheet="SmallScan">47</entry>
+	<entry sheet="SmallScan">53</entry>
+	<entry sheet="SmallScan">57</entry>
+	<entry sheet="SmallScan">67</entry>
+	<entry sheet="SmallScan">24</entry>
 </dynamic>
 <dynamic name="Rocks (T Small)">
 	<descriptible>
@@ -28,10 +28,10 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<entry sheet="smalltotal">1</entry>
-	<entry sheet="smalltotal">4</entry>
-	<entry sheet="smalltotal">48</entry>
-	<entry sheet="smalltotal">87</entry>
+	<entry sheet="SmallScan">1</entry>
+	<entry sheet="SmallScan">4</entry>
+	<entry sheet="SmallScan">48</entry>
+	<entry sheet="SmallScan">87</entry>
 </dynamic>
 <dynamic name="Water (T Small)">
 	<descriptible>
@@ -40,8 +40,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<entry sheet="smalltotal">8</entry>
-	<entry sheet="smalltotal">9</entry>
+	<entry sheet="SmallScan">8</entry>
+	<entry sheet="SmallScan">9</entry>
 </dynamic>
 <dynamic name="Iceland (T Scan)">
 	<descriptible>
@@ -50,8 +50,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<entry sheet="scantotal">78</entry>
-	<entry sheet="scanthousand">79</entry>
+	<entry sheet="LargeScan">78</entry>
+	<entry sheet="LargeScanPerMil">79</entry>
 </dynamic>
 <dynamic name="Lava (T Small)">
 	<descriptible>
@@ -60,9 +60,21 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<entry sheet="smalltotal">10</entry>
-	<entry sheet="smalltotal">11</entry>
+	<entry sheet="SmallScan">10</entry>
+	<entry sheet="SmallScan">11</entry>
 </dynamic>
+<condition name="Sunlight lower than 5/15">
+	<descriptible>
+		<nickname>Sunlight lower than 5/15</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>5.0</constant>
+</condition>
 <condition name="Receive Sunlight">
 	<descriptible>
 		<nickname>Receive Sunlight</nickname>
@@ -70,34 +82,10 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>instant</sheet>
+	<sheet>Instants</sheet>
 	<key>0</key>
 	<symbol>&gt;</symbol>
 	<constant>0.0</constant>
-</condition>
-<condition name="Time (0 - 12000)">
-	<descriptible>
-		<nickname>Time (0 - 12000)</nickname>
-		<description>Early to Begin Late</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>instant</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>12000.0</constant>
-</condition>
-<condition name="Time (0 - 6000)">
-	<descriptible>
-		<nickname>Time (0 - 6000)</nickname>
-		<description>Early to Midday</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>instant</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>6000.0</constant>
 </condition>
 <condition name="Is Raining">
 	<descriptible>
@@ -106,22 +94,10 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>instant</sheet>
+	<sheet>Instants</sheet>
 	<key>7</key>
 	<symbol>==</symbol>
 	<constant>1.0</constant>
-</condition>
-<condition name="Air 30% (S)">
-	<descriptible>
-		<nickname>Air 30% (S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>scanthousand</sheet>
-	<key>0</key>
-	<symbol>&gt;</symbol>
-	<constant>300.0</constant>
 </condition>
 <condition name="Time (0 - 22000)">
 	<descriptible>
@@ -130,7 +106,7 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>instant</sheet>
+	<sheet>Instants</sheet>
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>22000.0</constant>
@@ -142,22 +118,22 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>instant</sheet>
+	<sheet>Instants</sheet>
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>14000.0</constant>
 </condition>
-<condition name="Trees 16x16x4 (S)">
+<condition name="Hourclock">
 	<descriptible>
-		<nickname>Trees 16x16x4 (S)</nickname>
-		<description>2048 blocks of leaves</description>
+		<nickname>Hourclock</nickname>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>scantotal</sheet>
-	<key>18</key>
-	<symbol>&gt;</symbol>
-	<constant>1024.0</constant>
+	<sheet>SpecialLarge</sheet>
+	<key>0</key>
+	<symbol>!=</symbol>
+	<constant>0.0</constant>
 </condition>
 <condition name="Time (0 - 13000)">
 	<descriptible>
@@ -166,22 +142,22 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>instant</sheet>
+	<sheet>Instants</sheet>
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>13000.0</constant>
 </condition>
-<condition name="Sunlight lower than 10/15">
+<condition name="Manmade Town">
 	<descriptible>
-		<nickname>Sunlight lower than 10/15</nickname>
-		<description>Sunlight under 10</description>
+		<nickname>Manmade Town</nickname>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>instant</sheet>
-	<key>0</key>
-	<symbol>&lt;</symbol>
-	<constant>10.0</constant>
+	<key>-1</key>
+	<dynamickey>Manmade Common (T Small)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>64.0</constant>
 </condition>
 <condition name="Plains 2% (S)">
 	<descriptible>
@@ -190,33 +166,83 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>scanthousand</sheet>
+	<sheet>LargeScanPerMil</sheet>
 	<key>2</key>
 	<symbol>&gt;</symbol>
 	<constant>20.0</constant>
 </condition>
-<set name="Forest">
+<condition name="Highlands (96)">
 	<descriptible>
-		<nickname>Forest</nickname>
-		<description>The player can see a forest.</description>
+		<nickname>Highlands (96)</nickname>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Receive Sunlight</truepart>
-	<truepart>Air 30% (S)</truepart>
-	<truepart>Trees 16x16x4 (S)</truepart>
-	<truepart>Plains 2% (S)</truepart>
-</set>
-<set name="Time (12000 - 22000)">
+	<sheet>Instants</sheet>
+	<key>4</key>
+	<symbol>&gt;</symbol>
+	<constant>96.0</constant>
+</condition>
+<condition name="Time (0 - 12000)">
 	<descriptible>
-		<nickname>Time (12000 - 22000)</nickname>
-		<description>Late to Begin Sunrise</description>
+		<nickname>Time (0 - 12000)</nickname>
+		<description>Early to Begin Late</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 12000)</falsepart>
-	<truepart>Time (0 - 22000)</truepart>
-</set>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>12000.0</constant>
+</condition>
+<condition name="Time (0 - 6000)">
+	<descriptible>
+		<nickname>Time (0 - 6000)</nickname>
+		<description>Early to Midday</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>6000.0</constant>
+</condition>
+<condition name="Air 30% (S)">
+	<descriptible>
+		<nickname>Air 30% (S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>0</key>
+	<symbol>&gt;</symbol>
+	<constant>300.0</constant>
+</condition>
+<condition name="Trees 16x16x4 (S)">
+	<descriptible>
+		<nickname>Trees 16x16x4 (S)</nickname>
+		<description>2048 blocks of leaves</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScan</sheet>
+	<key>18</key>
+	<symbol>&gt;</symbol>
+	<constant>1024.0</constant>
+</condition>
+<condition name="Sunlight lower than 10/15">
+	<descriptible>
+		<nickname>Sunlight lower than 10/15</nickname>
+		<description>Sunlight under 10</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>10.0</constant>
+</condition>
 <set name="Time (14000 - 22000)">
 	<descriptible>
 		<nickname>Time (14000 - 22000)</nickname>
@@ -224,17 +250,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 22000)</truepart>
 	<falsepart>Time (0 - 14000)</falsepart>
-</set>
-<set name="Time (0 - 6000)">
-	<descriptible>
-		<nickname>Time (0 - 6000)</nickname>
-		<description>Early to Midday</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Time (0 - 6000)</truepart>
+	<truepart>Time (0 - 22000)</truepart>
 </set>
 <set name="Time (6000 - 12000)">
 	<descriptible>
@@ -243,8 +260,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 12000)</truepart>
 	<falsepart>Time (0 - 6000)</falsepart>
+	<truepart>Time (0 - 12000)</truepart>
 </set>
 <set name="Is Raining">
 	<descriptible>
@@ -273,6 +290,57 @@
 	</descriptible>
 	<falsepart>Sunlight lower than 10/15</falsepart>
 </set>
+<set name="Manmade Town">
+	<descriptible>
+		<nickname>Manmade Town</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Manmade Town</truepart>
+</set>
+<set name="Forest">
+	<descriptible>
+		<nickname>Forest</nickname>
+		<description>The player can see a forest.</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Receive Sunlight</truepart>
+	<truepart>Air 30% (S)</truepart>
+	<truepart>Trees 16x16x4 (S)</truepart>
+	<truepart>Plains 2% (S)</truepart>
+</set>
+<set name="Time (12000 - 22000)">
+	<descriptible>
+		<nickname>Time (12000 - 22000)</nickname>
+		<description>Late to Begin Sunrise</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Time (0 - 12000)</falsepart>
+	<truepart>Time (0 - 22000)</truepart>
+</set>
+<set name="Time (0 - 6000)">
+	<descriptible>
+		<nickname>Time (0 - 6000)</nickname>
+		<description>Early to Midday</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Time (0 - 6000)</truepart>
+</set>
+<set name="Highlands (Visible)">
+	<descriptible>
+		<nickname>Highlands (Visible)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Air 30% (S)</truepart>
+	<truepart>Highlands (96)</truepart>
+</set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
 		<nickname>Time (22000 - 23999)</nickname>
@@ -292,6 +360,71 @@
 	<falsepart>Time (0 - 12000)</falsepart>
 	<truepart>Time (0 - 14000)</truepart>
 </set>
+<event name="Cave freightening">
+	<descriptible>
+		<nickname>Cave freightening</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/atmosphere/cave_hit1.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit2.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit3.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit4.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit5.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit6.ogg</path>
+	<volmin>0.7</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.7</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>32</metasound>
+</event>
+<event name="Wind, very variable">
+	<descriptible>
+		<nickname>Wind, very variable</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/wind/windmill_wind_loop1.ogg</path>
+	<volmin>0.5</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.8</pitchmin>
+	<pitchmax>1.7</pitchmax>
+	<metasound>0</metasound>
+</event>
+<event name="Wind, very strong">
+	<descriptible>
+		<nickname>Wind, very strong</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/wind/wind_hit1.ogg</path>
+	<path>newsound/matmos_hl/wind/wind_hit2.ogg</path>
+	<path>newsound/matmos_hl/wind/wind_hit3.ogg</path>
+	<volmin>0.6</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.8</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>0</metasound>
+</event>
+<event name="Cave rumble">
+	<descriptible>
+		<nickname>Cave rumble</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/cave/rumble1.ogg</path>
+	<path>newsound/matmos_hl/cave/rumble2.ogg</path>
+	<path>newsound/matmos_hl/cave/rumble3.ogg</path>
+	<volmin>0.7</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>0</metasound>
+</event>
 <event name="Debugger">
 	<descriptible>
 		<nickname>Debugger</nickname>
@@ -306,6 +439,23 @@
 	<pitchmax>1.5</pitchmax>
 	<metasound>0</metasound>
 </event>
+<event name="Thunderstorm">
+	<descriptible>
+		<nickname>Thunderstorm</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/weather/thunder1.ogg</path>
+	<path>newsound/matmos_hl/weather/thunder2.ogg</path>
+	<path>newsound/matmos_hl/weather/thunder3.ogg</path>
+	<path>newsound/matmos_hl/weather/thunder4.ogg</path>
+	<volmin>0.4</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.7</pitchmin>
+	<pitchmax>1.2</pitchmax>
+	<metasound>32</metasound>
+</event>
 <event name="Birds">
 	<descriptible>
 		<nickname>Birds</nickname>
@@ -313,12 +463,12 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<path>newsound/atmos_hl/wildlife/chicka1.wav</path>
-	<path>newsound/atmos_hl/wildlife/chicka2.wav</path>
-	<path>newsound/atmos_hl/wildlife/chicka3.wav</path>
-	<path>newsound/atmos_hl/wildlife/chirp1.wav</path>
-	<path>newsound/atmos_hl/wildlife/chirp2.wav</path>
-	<path>newsound/atmos_hl/wildlife/chirp3.wav</path>
+	<path>newsound/matmos_hl/wildlife/chicka1.ogg</path>
+	<path>newsound/matmos_hl/wildlife/chicka2.ogg</path>
+	<path>newsound/matmos_hl/wildlife/chicka3.ogg</path>
+	<path>newsound/matmos_hl/wildlife/chirp1.ogg</path>
+	<path>newsound/matmos_hl/wildlife/chirp2.ogg</path>
+	<path>newsound/matmos_hl/wildlife/chirp3.ogg</path>
 	<volmin>1.0</volmin>
 	<volmax>1.0</volmax>
 	<pitchmin>0.9</pitchmin>
@@ -332,10 +482,10 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<path>newsound/atmos_hl/wind/treewind1.wav</path>
-	<path>newsound/atmos_hl/wind/treewind2.wav</path>
-	<path>newsound/atmos_hl/wind/treewind3.wav</path>
-	<path>newsound/atmos_hl/wind/treewind4.wav</path>
+	<path>newsound/matmos_hl/wind/treewind1.ogg</path>
+	<path>newsound/matmos_hl/wind/treewind2.ogg</path>
+	<path>newsound/matmos_hl/wind/treewind3.ogg</path>
+	<path>newsound/matmos_hl/wind/treewind4.ogg</path>
 	<volmin>0.7</volmin>
 	<volmax>1.0</volmax>
 	<pitchmin>0.9</pitchmin>
@@ -384,6 +534,32 @@
 		<delaymin>20000.0</delaymin>
 		<delaymax>20000.0</delaymax>
 		<delaystart>0.1</delaystart>
+		<volmod>1.0</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Highlands winds">
+	<descriptible>
+		<nickname>Highlands winds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Highlands (Visible)</allow>
+	<restrict>Manmade Town</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.5</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Wind, very strong</eventname>
+		<delaymin>1.0</delaymin>
+		<delaymax>2.5</delaymax>
+		<delaystart>0.0</delaystart>
 		<volmod>1.0</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
