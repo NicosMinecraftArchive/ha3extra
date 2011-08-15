@@ -470,6 +470,17 @@
 	</descriptible>
 	<truepart>Is Raining</truepart>
 </set>
+<set name="Highlands (96, Visible)">
+	<descriptible>
+		<nickname>Highlands (96, Visible)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Air 30% (L)</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Highlands (96)</truepart>
+</set>
 <set name="Outdoor">
 	<descriptible>
 		<nickname>Outdoor</nickname>
@@ -508,17 +519,6 @@
 	<truepart>Air 30% (L)</truepart>
 	<truepart>In Thunderstorm</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
-</set>
-<set name="Highlands (Visible)">
-	<descriptible>
-		<nickname>Highlands (Visible)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Digging safely in Nether">
 	<descriptible>
@@ -1133,24 +1133,6 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Water">
-	<descriptible>
-		<nickname>Water</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Abundant water</allow>
-	<allow>Nearby water</allow>
-	<eventtimed>
-		<eventname>Lake</eventname>
-		<delaymin>6.0</delaymin>
-		<delaymax>6.0</delaymax>
-		<delaystart>1.0</delaystart>
-		<volmod>0.6</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
 <machine name="Digging unsafely in the Nether">
 	<descriptible>
 		<nickname>Digging unsafely in the Nether</nickname>
@@ -1202,6 +1184,25 @@
 		<delaymax>2.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.2</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Water, outdoor">
+	<descriptible>
+		<nickname>Water, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Abundant water</allow>
+	<allow>Nearby water</allow>
+	<restrict>Indoor</restrict>
+	<eventtimed>
+		<eventname>Lake</eventname>
+		<delaymin>6.0</delaymin>
+		<delaymax>6.0</delaymax>
+		<delaystart>3.0</delaystart>
+		<volmod>0.5</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1259,6 +1260,25 @@
 		<delaymax>4.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.2</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Water, indoor">
+	<descriptible>
+		<nickname>Water, indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Abundant water</allow>
+	<allow>Nearby water</allow>
+	<restrict>Outdoor</restrict>
+	<eventtimed>
+		<eventname>Lake</eventname>
+		<delaymin>6.0</delaymin>
+		<delaymax>6.0</delaymax>
+		<delaystart>3.0</delaystart>
+		<volmod>0.1</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1445,7 +1465,7 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<allow>Highlands (Visible)</allow>
+	<allow>Highlands (96, Visible)</allow>
 	<restrict>Manmade Town</restrict>
 	<restrict>Is Underwater</restrict>
 	<eventtimed>
