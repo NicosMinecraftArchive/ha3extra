@@ -63,18 +63,6 @@
 	<entry sheet="SmallScan">10</entry>
 	<entry sheet="SmallScan">11</entry>
 </dynamic>
-<condition name="Sunlight lower than 5/15">
-	<descriptible>
-		<nickname>Sunlight lower than 5/15</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>0</key>
-	<symbol>&lt;</symbol>
-	<constant>5.0</constant>
-</condition>
 <condition name="In Thunderstorm">
 	<descriptible>
 		<nickname>In Thunderstorm</nickname>
@@ -86,6 +74,18 @@
 	<key>8</key>
 	<symbol>==</symbol>
 	<constant>1.0</constant>
+</condition>
+<condition name="Sunlight lower than 5/15">
+	<descriptible>
+		<nickname>Sunlight lower than 5/15</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>5.0</constant>
 </condition>
 <condition name="Receive Sunlight">
 	<descriptible>
@@ -159,6 +159,18 @@
 	<symbol>&gt;</symbol>
 	<constant>300.0</constant>
 </condition>
+<condition name="Water 10% (L)">
+	<descriptible>
+		<nickname>Water 10% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>9</key>
+	<symbol>&gt;</symbol>
+	<constant>100.0</constant>
+</condition>
 <condition name="Time (0 - 12000)">
 	<descriptible>
 		<nickname>Time (0 - 12000)</nickname>
@@ -170,6 +182,18 @@
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>12000.0</constant>
+</condition>
+<condition name="Sand 10% (L)">
+	<descriptible>
+		<nickname>Sand 10% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>12</key>
+	<symbol>&gt;</symbol>
+	<constant>100.0</constant>
 </condition>
 <condition name="Sunlight lower than 10/15">
 	<descriptible>
@@ -195,6 +219,18 @@
 	<symbol>&gt;</symbol>
 	<constant>0.0</constant>
 </condition>
+<condition name="Is Underwater">
+	<descriptible>
+		<nickname>Is Underwater</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>6</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
 <condition name="Air is tight 35% (S)">
 	<descriptible>
 		<nickname>Air is tight 35% (S)</nickname>
@@ -207,17 +243,17 @@
 	<symbol>&lt;</symbol>
 	<constant>350.0</constant>
 </condition>
-<condition name="Is Underwater">
+<condition name="Nearby fire (12)">
 	<descriptible>
-		<nickname>Is Underwater</nickname>
+		<nickname>Nearby fire (12)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>Instants</sheet>
-	<key>6</key>
-	<symbol>==</symbol>
-	<constant>1.0</constant>
+	<sheet>SmallScan</sheet>
+	<key>51</key>
+	<symbol>&gt;</symbol>
+	<constant>11.0</constant>
 </condition>
 <condition name="Nearby fire (7)">
 	<descriptible>
@@ -303,17 +339,17 @@
 	<symbol>&gt;</symbol>
 	<constant>4.0</constant>
 </condition>
-<condition name="Sea water">
+<condition name="Big fire (30)">
 	<descriptible>
-		<nickname>Sea water</nickname>
+		<nickname>Big fire (30)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>LargeScanPerMil</sheet>
-	<key>9</key>
+	<sheet>LargeScan</sheet>
+	<key>51</key>
 	<symbol>&gt;</symbol>
-	<constant>100.0</constant>
+	<constant>30.0</constant>
 </condition>
 <condition name="Time (0 - 6000)">
 	<descriptible>
@@ -327,17 +363,17 @@
 	<symbol>&lt;</symbol>
 	<constant>6000.0</constant>
 </condition>
-<condition name="Big fire">
+<condition name="Lava (S)">
 	<descriptible>
-		<nickname>Big fire</nickname>
+		<nickname>Lava (S)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<sheet>LargeScan</sheet>
-	<key>51</key>
+	<key>-1</key>
+	<dynamickey>Lava (T Small)</dynamickey>
 	<symbol>&gt;</symbol>
-	<constant>30.0</constant>
+	<constant>12.0</constant>
 </condition>
 <condition name="Trees 512 (L)">
 	<descriptible>
@@ -385,6 +421,25 @@
 	<truepart>Rocks (24 S)</truepart>
 	<truepart>Is Nether</truepart>
 </set>
+<set name="Nearby fire (12) Dimensions">
+	<descriptible>
+		<nickname>Nearby fire (12) Dimensions</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Nearby fire (12)</truepart>
+</set>
+<set name="Time (14000 - 22000)">
+	<descriptible>
+		<nickname>Time (14000 - 22000)</nickname>
+		<description>Dark night</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<falsepart>Time (0 - 14000)</falsepart>
+	<truepart>Time (0 - 22000)</truepart>
+</set>
 <set name="Rock shelter">
 	<descriptible>
 		<nickname>Rock shelter</nickname>
@@ -396,25 +451,6 @@
 	<falsepart>Receive Sunlight</falsepart>
 	<falsepart>Deep (32)</falsepart>
 </set>
-<set name="Time (14000 - 22000)">
-	<descriptible>
-		<nickname>Time (14000 - 22000)</nickname>
-		<description>Dark night</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Time (0 - 22000)</truepart>
-	<falsepart>Time (0 - 14000)</falsepart>
-</set>
-<set name="Is Raining">
-	<descriptible>
-		<nickname>Is Raining</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Is Raining</truepart>
-</set>
 <set name="Indoor">
 	<descriptible>
 		<nickname>Indoor</nickname>
@@ -424,6 +460,15 @@
 	</descriptible>
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Sunlight lower than 10/15</truepart>
+</set>
+<set name="Is Raining">
+	<descriptible>
+		<nickname>Is Raining</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Is Raining</truepart>
 </set>
 <set name="Outdoor">
 	<descriptible>
@@ -460,18 +505,20 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
 </set>
-<set name="Nearby fire (1) Dimensions">
+<set name="Highlands (Visible)">
 	<descriptible>
-		<nickname>Nearby fire (1) Dimensions</nickname>
+		<nickname>Highlands (Visible)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Nearby fire (1)</truepart>
+	<truepart>Air 30% (L)</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Digging safely in Nether">
 	<descriptible>
@@ -482,17 +529,6 @@
 	</descriptible>
 	<truepart>Air is tight 35% (S)</truepart>
 	<truepart>Is Nether</truepart>
-</set>
-<set name="Highlands (Visible)">
-	<descriptible>
-		<nickname>Highlands (Visible)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -529,19 +565,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 12000)</truepart>
 	<falsepart>Time (0 - 6000)</falsepart>
-</set>
-<set name="Big fire, In Nether">
-	<descriptible>
-		<nickname>Big fire, In Nether</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Air is tight 35% (S)</truepart>
-	<truepart>Big fire</truepart>
-	<truepart>Is Nether</truepart>
+	<truepart>Time (0 - 12000)</truepart>
 </set>
 <set name="Plains">
 	<descriptible>
@@ -554,6 +579,27 @@
 	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
 </set>
+<set name="Big fire (30), In Nether">
+	<descriptible>
+		<nickname>Big fire (30), In Nether</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Air is tight 35% (S)</truepart>
+	<truepart>Big fire (30)</truepart>
+	<truepart>Is Nether</truepart>
+</set>
+<set name="Nearby fire (1) Not firecamp">
+	<descriptible>
+		<nickname>Nearby fire (1) Not firecamp</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Nearby fire (1)</truepart>
+	<falsepart>Manmade Town</falsepart>
+</set>
 <set name="Thunderstorm indoor">
 	<descriptible>
 		<nickname>Thunderstorm indoor</nickname>
@@ -561,10 +607,19 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Sunlight lower than 5/15</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Sunlight lower than 5/15</truepart>
 	<truepart>Receive Sunlight</truepart>
+</set>
+<set name="Lava nearby">
+	<descriptible>
+		<nickname>Lava nearby</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Lava (S)</truepart>
 </set>
 <set name="Forest">
 	<descriptible>
@@ -577,16 +632,6 @@
 	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Trees 512 (L)</truepart>
-</set>
-<set name="Big fire, Not Nether">
-	<descriptible>
-		<nickname>Big fire, Not Nether</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Big fire</truepart>
-	<falsepart>Is Nether</falsepart>
 </set>
 <set name="Nearby water">
 	<descriptible>
@@ -623,7 +668,28 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Sea water</truepart>
+	<truepart>Water 10% (L)</truepart>
+</set>
+<set name="Beach">
+	<descriptible>
+		<nickname>Beach</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Air 30% (L)</truepart>
+	<truepart>Water 10% (L)</truepart>
+	<truepart>Sand 10% (L)</truepart>
+</set>
+<set name="Big fire (30), Not Nether">
+	<descriptible>
+		<nickname>Big fire (30), Not Nether</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Big fire (30)</truepart>
+	<falsepart>Is Nether</falsepart>
 </set>
 <set name="In Nether">
 	<descriptible>
@@ -633,6 +699,17 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Is Nether</truepart>
+</set>
+<set name="Nearby fire (1) Firecamp">
+	<descriptible>
+		<nickname>Nearby fire (1) Firecamp</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Nearby fire (1)</truepart>
+	<falsepart>Nearby fire (12)</falsepart>
+	<truepart>Manmade Town</truepart>
 </set>
 <set name="Deep cave (16)">
 	<descriptible>
@@ -759,6 +836,25 @@
 	<pitchmax>0.9</pitchmax>
 	<metasound>0</metasound>
 </event>
+<event name="Beach waves">
+	<descriptible>
+		<nickname>Beach waves</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/water/wave1.ogg</path>
+	<path>newsound/matmos_hl/water/wave2.ogg</path>
+	<path>newsound/matmos_hl/water/wave3.ogg</path>
+	<path>newsound/matmos_hl/water/wave4.ogg</path>
+	<path>newsound/matmos_hl/water/wave5.ogg</path>
+	<path>newsound/matmos_hl/water/wave6.ogg</path>
+	<volmin>1.0</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>0</metasound>
+</event>
 <event name="Cave rumble">
 	<descriptible>
 		<nickname>Cave rumble</nickname>
@@ -790,7 +886,7 @@
 	<volmax>0.7</volmax>
 	<pitchmin>0.7</pitchmin>
 	<pitchmax>1.2</pitchmax>
-	<metasound>32</metasound>
+	<metasound>128</metasound>
 </event>
 <event name="Bad events">
 	<descriptible>
@@ -830,6 +926,24 @@
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
+</event>
+<event name="Seagulls">
+	<descriptible>
+		<nickname>Seagulls</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/wildlife/seagulls_ambient1.ogg</path>
+	<path>newsound/matmos_hl/wildlife/seagulls_ambient2.ogg</path>
+	<path>newsound/matmos_hl/wildlife/seagulls_ambient3.ogg</path>
+	<path>newsound/matmos_hl/wildlife/seagulls_ambient4.ogg</path>
+	<path>newsound/matmos_hl/wildlife/seagulls_ambient5.ogg</path>
+	<volmin>1.0</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
+	<metasound>48</metasound>
 </event>
 <event name="Fire (Big)">
 	<descriptible>
@@ -909,7 +1023,7 @@
 	<path>newsound/matmos_hl/wildlife/squeek1.ogg</path>
 	<path>newsound/matmos_hl/wildlife/squeek2.ogg</path>
 	<path>newsound/matmos_hl/wildlife/squeek3.ogg</path>
-	<volmin>0.6</volmin>
+	<volmin>1.0</volmin>
 	<volmax>1.0</volmax>
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
@@ -972,54 +1086,14 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<allow>Nearby fire (1) Dimensions</allow>
+	<allow>Nearby fire (1) Not firecamp</allow>
+	<allow>Nearby fire (12) Dimensions</allow>
 	<eventtimed>
 		<eventname>Fire (Small)</eventname>
 		<delaymin>2.0</delaymin>
 		<delaymax>3.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.05</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Nightbirds">
-	<descriptible>
-		<nickname>Nightbirds</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Plains</allow>
-	<restrict>Time (6000 - 12000)</restrict>
-	<restrict>Time (22000 - 23999)</restrict>
-	<restrict>Time (0 - 6000)</restrict>
-	<restrict>Is Underwater</restrict>
-	<eventtimed>
-		<eventname>Nightbirds</eventname>
-		<delaymin>0.5</delaymin>
-		<delaymax>6.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.5</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Forest wind, outdoor">
-	<descriptible>
-		<nickname>Forest wind, outdoor</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Forest</allow>
-	<restrict>Is Raining</restrict>
-	<restrict>Indoor</restrict>
-	<restrict>Is Underwater</restrict>
-	<eventtimed>
-		<eventname>Wind, trees</eventname>
-		<delaymin>6.0</delaymin>
-		<delaymax>17.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.8</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1042,57 +1116,20 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Fire (Class 2)">
+<machine name="Lava rumble">
 	<descriptible>
-		<nickname>Fire (Class 2)</nickname>
+		<nickname>Lava rumble</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<allow>Nearby fire (7) In Nether</allow>
-	<allow>Nearby fire (7) Not Nether</allow>
-	<allow>Big fire, In Nether</allow>
-	<allow>Big fire, Not Nether</allow>
+	<allow>Lava nearby</allow>
 	<eventtimed>
-		<eventname>Fire (Big)</eventname>
-		<delaymin>3.0</delaymin>
-		<delaymax>5.0</delaymax>
+		<eventname>Cave rumble</eventname>
+		<delaymin>4.0</delaymin>
+		<delaymax>6.0</delaymax>
 		<delaystart>0.0</delaystart>
-		<volmod>0.3</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Freightening cave">
-	<descriptible>
-		<nickname>Freightening cave</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Deep cave (32)</allow>
-	<eventtimed>
-		<eventname>Cave freightening</eventname>
-		<delaymin>7.0</delaymin>
-		<delaymax>32.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.3</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Thunderstorm indoor">
-	<descriptible>
-		<nickname>Thunderstorm indoor</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Thunderstorm indoor</allow>
-	<eventtimed>
-		<eventname>Thunderstorm</eventname>
-		<delaymin>7.0</delaymin>
-		<delaymax>32.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.3</volmod>
+		<volmod>0.5</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1168,20 +1205,22 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Thunderstorm outdoor">
+<machine name="Beach seagulls, indoor">
 	<descriptible>
-		<nickname>Thunderstorm outdoor</nickname>
+		<nickname>Beach seagulls, indoor</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<allow>Thunderstorm outdoor</allow>
+	<allow>Beach</allow>
+	<restrict>Outdoor</restrict>
+	<restrict>Is Raining</restrict>
 	<eventtimed>
-		<eventname>Thunderstorm</eventname>
-		<delaymin>7.0</delaymin>
-		<delaymax>32.0</delaymax>
+		<eventname>Seagulls</eventname>
+		<delaymin>3.0</delaymin>
+		<delaymax>12.0</delaymax>
 		<delaystart>0.0</delaystart>
-		<volmod>0.7</volmod>
+		<volmod>0.05</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1200,6 +1239,200 @@
 		<eventname>Wind, trees</eventname>
 		<delaymin>8.0</delaymin>
 		<delaymax>24.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Digging safely in Nether">
+	<descriptible>
+		<nickname>Digging safely in Nether</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Digging in the Nether</allow>
+	<allow>Digging safely in Nether</allow>
+	<eventtimed>
+		<eventname>Cafe freightening bass</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>4.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.2</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Fire (Class 0)">
+	<descriptible>
+		<nickname>Fire (Class 0)</nickname>
+		<description>TODO</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Nearby fire (1) Firecamp</allow>
+</machine>
+<machine name="Fire (Class 2)">
+	<descriptible>
+		<nickname>Fire (Class 2)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Nearby fire (7) In Nether</allow>
+	<allow>Nearby fire (7) Not Nether</allow>
+	<allow>Big fire (30), In Nether</allow>
+	<allow>Big fire (30), Not Nether</allow>
+	<eventtimed>
+		<eventname>Fire (Big)</eventname>
+		<delaymin>3.0</delaymin>
+		<delaymax>5.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Forest wind, outdoor">
+	<descriptible>
+		<nickname>Forest wind, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Forest</allow>
+	<restrict>Is Raining</restrict>
+	<restrict>Indoor</restrict>
+	<restrict>Is Underwater</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>6.0</delaymin>
+		<delaymax>17.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.8</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Nightbirds">
+	<descriptible>
+		<nickname>Nightbirds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Time (6000 - 12000)</restrict>
+	<restrict>Time (22000 - 23999)</restrict>
+	<restrict>Time (0 - 6000)</restrict>
+	<restrict>Is Underwater</restrict>
+	<eventtimed>
+		<eventname>Nightbirds</eventname>
+		<delaymin>0.5</delaymin>
+		<delaymax>6.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.5</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Beach seagulls, outdoor">
+	<descriptible>
+		<nickname>Beach seagulls, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Beach</allow>
+	<restrict>Indoor</restrict>
+	<restrict>Is Raining</restrict>
+	<eventtimed>
+		<eventname>Seagulls</eventname>
+		<delaymin>3.0</delaymin>
+		<delaymax>12.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.05</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Freightening cave">
+	<descriptible>
+		<nickname>Freightening cave</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Deep cave (32)</allow>
+	<eventtimed>
+		<eventname>Cave freightening</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>32.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Thunderstorm, outdoor">
+	<descriptible>
+		<nickname>Thunderstorm, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Thunderstorm outdoor</allow>
+	<eventtimed>
+		<eventname>Thunderstorm</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>32.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.7</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Beach waves, indoor">
+	<descriptible>
+		<nickname>Beach waves, indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Beach</allow>
+	<restrict>Outdoor</restrict>
+	<eventtimed>
+		<eventname>Beach waves</eventname>
+		<delaymin>3.0</delaymin>
+		<delaymax>5.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.05</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Beach waves, outdoor">
+	<descriptible>
+		<nickname>Beach waves, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Beach</allow>
+	<restrict>Indoor</restrict>
+	<eventtimed>
+		<eventname>Beach waves</eventname>
+		<delaymin>3.0</delaymin>
+		<delaymax>5.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.5</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Thunderstorm, indoor">
+	<descriptible>
+		<nickname>Thunderstorm, indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Thunderstorm indoor</allow>
+	<eventtimed>
+		<eventname>Thunderstorm</eventname>
+		<delaymin>7.0</delaymin>
+		<delaymax>32.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.3</volmod>
 		<pitchmod>1.0</pitchmod>
@@ -1313,24 +1546,6 @@
 		<delaymax>9.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.6</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Digging safely in Nether">
-	<descriptible>
-		<nickname>Digging safely in Nether</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Digging in the Nether</allow>
-	<allow>Digging safely in Nether</allow>
-	<eventtimed>
-		<eventname>Cafe freightening bass</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>4.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.2</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
