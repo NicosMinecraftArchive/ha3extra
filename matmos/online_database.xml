@@ -1484,7 +1484,7 @@
 		<eventname>ZZZ DEBUGGER A</eventname>
 		<delaymin>1000000.0</delaymin>
 		<delaymax>1000000.0</delaymax>
-		<delaystart>1.0</delaystart>
+		<delaystart>5.0</delaystart>
 		<volmod>1.0</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
@@ -1492,7 +1492,7 @@
 		<eventname>ZZZ DEBUGGER B</eventname>
 		<delaymin>1000000.0</delaymin>
 		<delaymax>1000000.0</delaymax>
-		<delaystart>1.3</delaystart>
+		<delaystart>5.3</delaystart>
 		<volmod>1.0</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
