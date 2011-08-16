@@ -72,20 +72,8 @@
 	</descriptible>
 	<sheet>Instants</sheet>
 	<key>4</key>
-	<symbol>&gt;=</symbol>
-	<constant>0.0</constant>
-</condition>
-<condition name="In Thunderstorm">
-	<descriptible>
-		<nickname>In Thunderstorm</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>8</key>
-	<symbol>==</symbol>
-	<constant>1.0</constant>
+	<symbol>!=</symbol>
+	<constant>-1.0</constant>
 </condition>
 <condition name="Sunlight lower than 5/15">
 	<descriptible>
@@ -98,6 +86,18 @@
 	<key>0</key>
 	<symbol>&lt;</symbol>
 	<constant>5.0</constant>
+</condition>
+<condition name="In Thunderstorm">
+	<descriptible>
+		<nickname>In Thunderstorm</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>8</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
 </condition>
 <condition name="Receive Sunlight">
 	<descriptible>
@@ -171,18 +171,6 @@
 	<symbol>&gt;</symbol>
 	<constant>300.0</constant>
 </condition>
-<condition name="Water 10% (L)">
-	<descriptible>
-		<nickname>Water 10% (L)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScanPerMil</sheet>
-	<key>9</key>
-	<symbol>&gt;</symbol>
-	<constant>100.0</constant>
-</condition>
 <condition name="Time (0 - 12000)">
 	<descriptible>
 		<nickname>Time (0 - 12000)</nickname>
@@ -194,6 +182,18 @@
 	<key>3</key>
 	<symbol>&lt;</symbol>
 	<constant>12000.0</constant>
+</condition>
+<condition name="Water 10% (L)">
+	<descriptible>
+		<nickname>Water 10% (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>LargeScanPerMil</sheet>
+	<key>9</key>
+	<symbol>&gt;</symbol>
+	<constant>100.0</constant>
 </condition>
 <condition name="Sand 10% (L)">
 	<descriptible>
@@ -451,16 +451,6 @@
 	</descriptible>
 	<truepart>Nearby fire (12)</truepart>
 </set>
-<set name="Time (14000 - 22000)">
-	<descriptible>
-		<nickname>Time (14000 - 22000)</nickname>
-		<description>Dark night</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<falsepart>Time (0 - 14000)</falsepart>
-	<truepart>Time (0 - 22000)</truepart>
-</set>
 <set name="Rock shelter">
 	<descriptible>
 		<nickname>Rock shelter</nickname>
@@ -472,15 +462,15 @@
 	<falsepart>Receive Sunlight</falsepart>
 	<falsepart>Deep (32)</falsepart>
 </set>
-<set name="Indoor">
+<set name="Time (14000 - 22000)">
 	<descriptible>
-		<nickname>Indoor</nickname>
-		<description></description>
+		<nickname>Time (14000 - 22000)</nickname>
+		<description>Dark night</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Receive Sunlight</truepart>
-	<truepart>Sunlight lower than 10/15</truepart>
+	<truepart>Time (0 - 22000)</truepart>
+	<falsepart>Time (0 - 14000)</falsepart>
 </set>
 <set name="Is Raining">
 	<descriptible>
@@ -491,6 +481,16 @@
 	</descriptible>
 	<truepart>Is Raining</truepart>
 </set>
+<set name="Indoor">
+	<descriptible>
+		<nickname>Indoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Receive Sunlight</truepart>
+	<truepart>Sunlight lower than 10/15</truepart>
+</set>
 <set name="Highlands (96, Visible)">
 	<descriptible>
 		<nickname>Highlands (96, Visible)</nickname>
@@ -498,8 +498,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Outdoor">
@@ -537,9 +537,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
 </set>
 <set name="Digging safely in Nether">
 	<descriptible>
@@ -586,8 +586,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 6000)</falsepart>
 	<truepart>Time (0 - 12000)</truepart>
+	<falsepart>Time (0 - 6000)</falsepart>
 </set>
 <set name="Plains">
 	<descriptible>
@@ -628,9 +628,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Sunlight lower than 5/15</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Lava nearby">
@@ -641,6 +641,17 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Lava (S)</truepart>
+</set>
+<set name="Wet cave">
+	<descriptible>
+		<nickname>Wet cave</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Rocks (24 S)</truepart>
+	<truepart>Nearby water</truepart>
+	<truepart>Air is tight 35% (S)</truepart>
 </set>
 <set name="Forest">
 	<descriptible>
@@ -702,6 +713,15 @@
 	<truepart>Water 10% (L)</truepart>
 	<truepart>Sand 10% (L)</truepart>
 </set>
+<set name="In Nether">
+	<descriptible>
+		<nickname>In Nether</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Is Nether</truepart>
+</set>
 <set name="Big fire (30), Not Nether">
 	<descriptible>
 		<nickname>Big fire (30), Not Nether</nickname>
@@ -712,14 +732,15 @@
 	<truepart>Big fire (30)</truepart>
 	<falsepart>Is Nether</falsepart>
 </set>
-<set name="In Nether">
+<set name="Deep cave (16)">
 	<descriptible>
-		<nickname>In Nether</nickname>
+		<nickname>Deep cave (16)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Is Nether</truepart>
+	<truepart>Deep (16)</truepart>
+	<falsepart>Receive Sunlight</falsepart>
 </set>
 <set name="Nearby fire (1) Firecamp">
 	<descriptible>
@@ -731,16 +752,6 @@
 	<truepart>Nearby fire (1)</truepart>
 	<falsepart>Nearby fire (12)</falsepart>
 	<truepart>Manmade Town</truepart>
-</set>
-<set name="Deep cave (16)">
-	<descriptible>
-		<nickname>Deep cave (16)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Deep (16)</truepart>
-	<falsepart>Receive Sunlight</falsepart>
 </set>
 <set name="Deep cave (32)">
 	<descriptible>
@@ -773,6 +784,23 @@
 	<falsepart>Time (0 - 12000)</falsepart>
 	<truepart>Time (0 - 14000)</truepart>
 </set>
+<event name="Drops">
+	<descriptible>
+		<nickname>Drops</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/water/rain_drip1.ogg</path>
+	<path>newsound/matmos_hl/water/rain_drip2.ogg</path>
+	<path>newsound/matmos_hl/water/rain_drip3.ogg</path>
+	<path>newsound/matmos_hl/water/rain_drip4.ogg</path>
+	<volmin>0.7</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.3</pitchmax>
+	<metasound>0</metasound>
+</event>
 <event name="Nightbirds">
 	<descriptible>
 		<nickname>Nightbirds</nickname>
@@ -999,20 +1027,6 @@
 	<pitchmax>0.9</pitchmax>
 	<metasound>32</metasound>
 </event>
-<event name="Debugger">
-	<descriptible>
-		<nickname>Debugger</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<path>newsound/note/harp.ogg</path>
-	<volmin>1.0</volmin>
-	<volmax>1.0</volmax>
-	<pitchmin>1.5</pitchmin>
-	<pitchmax>1.5</pitchmax>
-	<metasound>0</metasound>
-</event>
 <event name="Wind, town">
 	<descriptible>
 		<nickname>Wind, town</nickname>
@@ -1025,6 +1039,20 @@
 	<volmax>0.6</volmax>
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>1.1</pitchmax>
+	<metasound>0</metasound>
+</event>
+<event name="Debugger">
+	<descriptible>
+		<nickname>Debugger</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/note/harp.ogg</path>
+	<volmin>1.0</volmin>
+	<volmax>1.0</volmax>
+	<pitchmin>1.5</pitchmin>
+	<pitchmax>1.5</pitchmax>
 	<metasound>0</metasound>
 </event>
 <event name="Birds">
@@ -1182,6 +1210,23 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
+<machine name="Dripping in cave">
+	<descriptible>
+		<nickname>Dripping in cave</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Wet cave</allow>
+	<eventtimed>
+		<eventname>Drops</eventname>
+		<delaymin>0.3</delaymin>
+		<delaymax>4.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.4</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Digging unsafely in the Nether">
 	<descriptible>
 		<nickname>Digging unsafely in the Nether</nickname>
@@ -1244,7 +1289,6 @@
 		<meta></meta>
 	</descriptible>
 	<allow>Abundant water</allow>
-	<allow>Nearby water</allow>
 	<restrict>Indoor</restrict>
 	<eventtimed>
 		<eventname>Lake</eventname>
@@ -1320,7 +1364,6 @@
 		<meta></meta>
 	</descriptible>
 	<allow>Abundant water</allow>
-	<allow>Nearby water</allow>
 	<restrict>Outdoor</restrict>
 	<eventtimed>
 		<eventname>Lake</eventname>
@@ -1594,6 +1637,26 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
+<machine name="Birds">
+	<descriptible>
+		<nickname>Birds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Time (12000 - 22000)</restrict>
+	<restrict>Is Raining</restrict>
+	<restrict>Is Underwater</restrict>
+	<eventtimed>
+		<eventname>Birds</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.6</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Plains Empty wind, indoor">
 	<descriptible>
 		<nickname>Plains Empty wind, indoor</nickname>
@@ -1620,26 +1683,6 @@
 		<delaymax>9.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.02</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Birds">
-	<descriptible>
-		<nickname>Birds</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Plains</allow>
-	<restrict>Time (12000 - 22000)</restrict>
-	<restrict>Is Raining</restrict>
-	<restrict>Is Underwater</restrict>
-	<eventtimed>
-		<eventname>Birds</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>9.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.6</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
