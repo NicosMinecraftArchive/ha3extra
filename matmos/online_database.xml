@@ -24,7 +24,8 @@
 <dynamic name="Rocks (T Small)">
 	<descriptible>
 		<nickname>Rocks (T Small)</nickname>
-		<description>Natural stones and cobblestone, including netherrack (does not include slabs)</description>
+		<description>Natural stones and cobblestone, including netherrack (does not include slabs)
+*aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -32,6 +33,7 @@
 	<entry sheet="SmallScan">4</entry>
 	<entry sheet="SmallScan">48</entry>
 	<entry sheet="SmallScan">87</entry>
+	<entry sheet="SmallScan">189</entry>
 </dynamic>
 <dynamic name="Water (T Small)">
 	<descriptible>
@@ -75,18 +77,6 @@
 	<symbol>!=</symbol>
 	<constant>-1.0</constant>
 </condition>
-<condition name="Sunlight lower than 5/15">
-	<descriptible>
-		<nickname>Sunlight lower than 5/15</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>0</key>
-	<symbol>&lt;</symbol>
-	<constant>5.0</constant>
-</condition>
 <condition name="In Thunderstorm">
 	<descriptible>
 		<nickname>In Thunderstorm</nickname>
@@ -99,6 +89,18 @@
 	<symbol>==</symbol>
 	<constant>1.0</constant>
 </condition>
+<condition name="Sunlight lower than 5/15">
+	<descriptible>
+		<nickname>Sunlight lower than 5/15</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>5.0</constant>
+</condition>
 <condition name="Receive Sunlight">
 	<descriptible>
 		<nickname>Receive Sunlight</nickname>
@@ -110,6 +112,18 @@
 	<key>0</key>
 	<symbol>&gt;</symbol>
 	<constant>0.0</constant>
+</condition>
+<condition name="In Aether (Assumption)">
+	<descriptible>
+		<nickname>In Aether (Assumption)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>25</key>
+	<symbol>==</symbol>
+	<constant>3.0</constant>
 </condition>
 <condition name="Is Raining">
 	<descriptible>
@@ -171,18 +185,6 @@
 	<symbol>&gt;</symbol>
 	<constant>300.0</constant>
 </condition>
-<condition name="Time (0 - 12000)">
-	<descriptible>
-		<nickname>Time (0 - 12000)</nickname>
-		<description>Early to Begin Late</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>3</key>
-	<symbol>&lt;</symbol>
-	<constant>12000.0</constant>
-</condition>
 <condition name="Water 10% (L)">
 	<descriptible>
 		<nickname>Water 10% (L)</nickname>
@@ -194,6 +196,18 @@
 	<key>9</key>
 	<symbol>&gt;</symbol>
 	<constant>100.0</constant>
+</condition>
+<condition name="Time (0 - 12000)">
+	<descriptible>
+		<nickname>Time (0 - 12000)</nickname>
+		<description>Early to Begin Late</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>3</key>
+	<symbol>&lt;</symbol>
+	<constant>12000.0</constant>
 </condition>
 <condition name="Sand 10% (L)">
 	<descriptible>
@@ -318,7 +332,7 @@
 <condition name="Rocks (24 S)">
 	<descriptible>
 		<nickname>Rocks (24 S)</nickname>
-		<description></description>
+		<description>*aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -399,6 +413,18 @@
 	<symbol>&gt;</symbol>
 	<constant>512.0</constant>
 </condition>
+<condition name="In Nether">
+	<descriptible>
+		<nickname>In Nether</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>10</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
 <condition name="Deep (32)">
 	<descriptible>
 		<nickname>Deep (32)</nickname>
@@ -410,18 +436,6 @@
 	<key>4</key>
 	<symbol>&lt;</symbol>
 	<constant>32.0</constant>
-</condition>
-<condition name="Is Nether">
-	<descriptible>
-		<nickname>Is Nether</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>Instants</sheet>
-	<key>10</key>
-	<symbol>==</symbol>
-	<constant>1.0</constant>
 </condition>
 <set name="ZZZ DEBUG TRUE">
 	<descriptible>
@@ -440,7 +454,7 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Rocks (24 S)</truepart>
-	<truepart>Is Nether</truepart>
+	<truepart>In Nether</truepart>
 </set>
 <set name="Nearby fire (12) Dimensions">
 	<descriptible>
@@ -451,17 +465,6 @@
 	</descriptible>
 	<truepart>Nearby fire (12)</truepart>
 </set>
-<set name="Rock shelter">
-	<descriptible>
-		<nickname>Rock shelter</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Rocks (24 S)</truepart>
-	<falsepart>Receive Sunlight</falsepart>
-	<falsepart>Deep (32)</falsepart>
-</set>
 <set name="Time (14000 - 22000)">
 	<descriptible>
 		<nickname>Time (14000 - 22000)</nickname>
@@ -469,17 +472,19 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 22000)</truepart>
 	<falsepart>Time (0 - 14000)</falsepart>
+	<truepart>Time (0 - 22000)</truepart>
 </set>
-<set name="Is Raining">
+<set name="Rock shelter">
 	<descriptible>
-		<nickname>Is Raining</nickname>
-		<description></description>
+		<nickname>Rock shelter</nickname>
+		<description>*aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Is Raining</truepart>
+	<truepart>Rocks (24 S)</truepart>
+	<falsepart>Receive Sunlight</falsepart>
+	<falsepart>Deep (32)</falsepart>
 </set>
 <set name="Indoor">
 	<descriptible>
@@ -491,6 +496,15 @@
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Sunlight lower than 10/15</truepart>
 </set>
+<set name="Is Raining">
+	<descriptible>
+		<nickname>Is Raining</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Is Raining</truepart>
+</set>
 <set name="Highlands (96, Visible)">
 	<descriptible>
 		<nickname>Highlands (96, Visible)</nickname>
@@ -498,8 +512,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Sunlight lower than 5/15</falsepart>
 	<truepart>Air 30% (L)</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
 	<truepart>Highlands (96)</truepart>
 </set>
 <set name="Outdoor">
@@ -528,7 +542,7 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Nearby fire (7)</truepart>
-	<falsepart>Is Nether</falsepart>
+	<falsepart>In Nether</falsepart>
 </set>
 <set name="Thunderstorm outdoor">
 	<descriptible>
@@ -537,9 +551,18 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
+</set>
+<set name="In Aether">
+	<descriptible>
+		<nickname>In Aether</nickname>
+		<description>Dimension (player) = 3</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>In Aether (Assumption)</truepart>
 </set>
 <set name="Digging safely in Nether">
 	<descriptible>
@@ -549,7 +572,7 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Air is tight 35% (S)</truepart>
-	<truepart>Is Nether</truepart>
+	<truepart>In Nether</truepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -577,7 +600,7 @@
 		<meta></meta>
 	</descriptible>
 	<falsepart>Air is tight 35% (S)</falsepart>
-	<truepart>Is Nether</truepart>
+	<truepart>In Nether</truepart>
 </set>
 <set name="Time (6000 - 12000)">
 	<descriptible>
@@ -586,8 +609,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 12000)</truepart>
 	<falsepart>Time (0 - 6000)</falsepart>
+	<truepart>Time (0 - 12000)</truepart>
 </set>
 <set name="Plains">
 	<descriptible>
@@ -609,7 +632,7 @@
 	</descriptible>
 	<truepart>Air is tight 35% (S)</truepart>
 	<truepart>Big fire (30)</truepart>
-	<truepart>Is Nether</truepart>
+	<truepart>In Nether</truepart>
 </set>
 <set name="Nearby fire (1) Not firecamp">
 	<descriptible>
@@ -628,9 +651,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Sunlight lower than 5/15</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Sunlight lower than 5/15</truepart>
 	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Lava nearby">
@@ -713,15 +736,6 @@
 	<truepart>Water 10% (L)</truepart>
 	<truepart>Sand 10% (L)</truepart>
 </set>
-<set name="In Nether">
-	<descriptible>
-		<nickname>In Nether</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<truepart>Is Nether</truepart>
-</set>
 <set name="Big fire (30), Not Nether">
 	<descriptible>
 		<nickname>Big fire (30), Not Nether</nickname>
@@ -730,17 +744,16 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Big fire (30)</truepart>
-	<falsepart>Is Nether</falsepart>
+	<falsepart>In Nether</falsepart>
 </set>
-<set name="Deep cave (16)">
+<set name="In Nether">
 	<descriptible>
-		<nickname>Deep cave (16)</nickname>
+		<nickname>In Nether</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Deep (16)</truepart>
-	<falsepart>Receive Sunlight</falsepart>
+	<truepart>In Nether</truepart>
 </set>
 <set name="Nearby fire (1) Firecamp">
 	<descriptible>
@@ -753,14 +766,28 @@
 	<falsepart>Nearby fire (12)</falsepart>
 	<truepart>Manmade Town</truepart>
 </set>
+<set name="Deep cave (16)">
+	<descriptible>
+		<nickname>Deep cave (16)</nickname>
+		<description>*aether</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Deep (16)</truepart>
+	<falsepart>Receive Sunlight</falsepart>
+	<falsepart>In Aether (Assumption)</falsepart>
+	<falsepart>In Nether</falsepart>
+</set>
 <set name="Deep cave (32)">
 	<descriptible>
 		<nickname>Deep cave (32)</nickname>
-		<description></description>
+		<description>*aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
 	<falsepart>Receive Sunlight</falsepart>
+	<falsepart>In Aether (Assumption)</falsepart>
+	<falsepart>In Nether</falsepart>
 	<truepart>Deep (32)</truepart>
 </set>
 <set name="Nearby fire (7) In Nether">
@@ -772,7 +799,7 @@
 	</descriptible>
 	<truepart>Air is tight 35% (S)</truepart>
 	<truepart>Nearby fire (7)</truepart>
-	<truepart>Is Nether</truepart>
+	<truepart>In Nether</truepart>
 </set>
 <set name="Time (12000 - 14000)">
 	<descriptible>
@@ -994,20 +1021,6 @@
 	<pitchmax>1.1</pitchmax>
 	<metasound>48</metasound>
 </event>
-<event name="Fire (Big)">
-	<descriptible>
-		<nickname>Fire (Big)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<path>newsound/matmos_hl/atmosphere/flame_thrower_fire_hit.ogg</path>
-	<volmin>0.5</volmin>
-	<volmax>0.7</volmax>
-	<pitchmin>0.3</pitchmin>
-	<pitchmax>0.5</pitchmax>
-	<metasound>0</metasound>
-</event>
 <event name="Cafe freightening bass">
 	<descriptible>
 		<nickname>Cafe freightening bass</nickname>
@@ -1027,18 +1040,18 @@
 	<pitchmax>0.9</pitchmax>
 	<metasound>32</metasound>
 </event>
-<event name="Wind, town">
+<event name="Fire (Big)">
 	<descriptible>
-		<nickname>Wind, town</nickname>
+		<nickname>Fire (Big)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<path>newsound/matmos_hl/atmosphere/plaza_amb.ogg</path>
-	<volmin>0.2</volmin>
-	<volmax>0.6</volmax>
-	<pitchmin>0.9</pitchmin>
-	<pitchmax>1.1</pitchmax>
+	<path>newsound/matmos_hl/atmosphere/flame_thrower_fire_hit.ogg</path>
+	<volmin>0.5</volmin>
+	<volmax>0.7</volmax>
+	<pitchmin>0.3</pitchmin>
+	<pitchmax>0.5</pitchmax>
 	<metasound>0</metasound>
 </event>
 <event name="Debugger">
@@ -1053,6 +1066,20 @@
 	<volmax>1.0</volmax>
 	<pitchmin>1.5</pitchmin>
 	<pitchmax>1.5</pitchmax>
+	<metasound>0</metasound>
+</event>
+<event name="Wind, town">
+	<descriptible>
+		<nickname>Wind, town</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/atmosphere/plaza_amb.ogg</path>
+	<volmin>0.2</volmin>
+	<volmax>0.6</volmax>
+	<pitchmin>0.9</pitchmin>
+	<pitchmax>1.1</pitchmax>
 	<metasound>0</metasound>
 </event>
 <event name="Birds">
@@ -1177,7 +1204,7 @@
 <machine name="Rock shelter">
 	<descriptible>
 		<nickname>Rock shelter</nickname>
-		<description></description>
+		<description>*aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -1578,13 +1605,14 @@
 <machine name="Highlands winds">
 	<descriptible>
 		<nickname>Highlands winds</nickname>
-		<description></description>
+		<description>(not Aether)</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
 	<allow>Highlands (96, Visible)</allow>
 	<restrict>Manmade Town</restrict>
 	<restrict>Is Underwater</restrict>
+	<restrict>In Aether</restrict>
 	<eventtimed>
 		<eventname>Wind, trees</eventname>
 		<delaymin>2.0</delaymin>
@@ -1637,26 +1665,6 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Birds">
-	<descriptible>
-		<nickname>Birds</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Plains</allow>
-	<restrict>Time (12000 - 22000)</restrict>
-	<restrict>Is Raining</restrict>
-	<restrict>Is Underwater</restrict>
-	<eventtimed>
-		<eventname>Birds</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>9.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.6</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
 <machine name="Plains Empty wind, indoor">
 	<descriptible>
 		<nickname>Plains Empty wind, indoor</nickname>
@@ -1683,6 +1691,26 @@
 		<delaymax>9.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.02</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Birds">
+	<descriptible>
+		<nickname>Birds</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<restrict>Time (12000 - 22000)</restrict>
+	<restrict>Is Raining</restrict>
+	<restrict>Is Underwater</restrict>
+	<eventtimed>
+		<eventname>Birds</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.6</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
