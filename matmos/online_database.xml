@@ -1275,6 +1275,25 @@
 	<pitchmax>0.5</pitchmax>
 	<metasound>0</metasound>
 </event>
+<machine name="Small amounts of water, outdoor">
+	<descriptible>
+		<nickname>Small amounts of water, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Nearby water</allow>
+	<restrict>Indoor</restrict>
+	<restrict>Abundant water</restrict>
+	<eventtimed>
+		<eventname>Lake</eventname>
+		<delaymin>6.0</delaymin>
+		<delaymax>6.0</delaymax>
+		<delaystart>3.0</delaystart>
+		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
 <machine name="Deep cave rumble (32)">
 	<descriptible>
 		<nickname>Deep cave rumble (32)</nickname>
@@ -1604,6 +1623,7 @@
 		<meta></meta>
 	</descriptible>
 	<allow>Plains</allow>
+	<allow>Beach</allow>
 	<restrict>Time (6000 - 12000)</restrict>
 	<restrict>Time (22000 - 23999)</restrict>
 	<restrict>Time (0 - 6000)</restrict>
@@ -1789,7 +1809,7 @@
 		<delaymin>7.0</delaymin>
 		<delaymax>7.0</delaymax>
 		<delaystart>1.0</delaystart>
-		<volmod>0.05</volmod>
+		<volmod>0.15</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
