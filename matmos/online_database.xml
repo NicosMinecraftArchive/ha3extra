@@ -476,7 +476,7 @@
 <condition name="Deep (32)">
 	<descriptible>
 		<nickname>Deep (32)</nickname>
-		<description>Altitude is highet than 32</description>
+		<description>Altitude is lesser than 32</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -521,7 +521,7 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Rocks (24 S)</truepart>
-	<falsepart>Receive Sunlight</falsepart>
+	<falsepart>Is Exposed to the Sky</falsepart>
 	<falsepart>Deep (32)</falsepart>
 </set>
 <set name="Time (14000 - 22000)">
@@ -1608,6 +1608,7 @@
 	<restrict>Time (22000 - 23999)</restrict>
 	<restrict>Time (0 - 6000)</restrict>
 	<restrict>Is Underwater</restrict>
+	<restrict>Is Raining</restrict>
 	<eventtimed>
 		<eventname>Nightbirds</eventname>
 		<delaymin>0.5</delaymin>
