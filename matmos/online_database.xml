@@ -53,7 +53,7 @@
 		<meta></meta>
 	</descriptible>
 	<entry sheet="LargeScan">78</entry>
-	<entry sheet="LargeScanPerMil">79</entry>
+	<entry sheet="LargeScan">79</entry>
 </dynamic>
 <dynamic name="Lava (T Small)">
 	<descriptible>
@@ -76,6 +76,18 @@
 	<key>4</key>
 	<symbol>!=</symbol>
 	<constant>-1.0</constant>
+</condition>
+<condition name="Cold world">
+	<descriptible>
+		<nickname>Cold world</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<key>-1</key>
+	<dynamickey>Iceland (T Scan)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>40.0</constant>
 </condition>
 <condition name="Sunlight lower than 5/15">
 	<descriptible>
@@ -579,6 +591,17 @@
 	</descriptible>
 	<truepart>Nearby fire (7)</truepart>
 	<falsepart>In Nether</falsepart>
+</set>
+<set name="Cold area">
+	<descriptible>
+		<nickname>Cold area</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<truepart>Air 30% (L)</truepart>
+	<truepart>Cold world</truepart>
+	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Thunderstorm outdoor">
 	<descriptible>
@@ -1366,35 +1389,6 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Plains Empty wind, outdoor">
-	<descriptible>
-		<nickname>Plains Empty wind, outdoor</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<allow>Plains</allow>
-	<restrict>Forest</restrict>
-	<restrict>Is Raining</restrict>
-	<restrict>Indoor</restrict>
-	<restrict>Is Underwater</restrict>
-	<eventtimed>
-		<eventname>Wind, trees</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>9.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.2</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-	<eventtimed>
-		<eventname>Wind, very strong</eventname>
-		<delaymin>1.0</delaymin>
-		<delaymax>2.0</delaymax>
-		<delaystart>0.0</delaystart>
-		<volmod>0.2</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
 <machine name="Water, outdoor">
 	<descriptible>
 		<nickname>Water, outdoor</nickname>
@@ -1430,6 +1424,36 @@
 		<delaymax>24.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.3</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+</machine>
+<machine name="Empty wind, outdoor">
+	<descriptible>
+		<nickname>Empty wind, outdoor</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<allow>Plains</allow>
+	<allow>Cold area</allow>
+	<restrict>Forest</restrict>
+	<restrict>Is Raining</restrict>
+	<restrict>Indoor</restrict>
+	<restrict>Is Underwater</restrict>
+	<eventtimed>
+		<eventname>Wind, trees</eventname>
+		<delaymin>2.0</delaymin>
+		<delaymax>9.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.2</volmod>
+		<pitchmod>1.0</pitchmod>
+	</eventtimed>
+	<eventtimed>
+		<eventname>Wind, very strong</eventname>
+		<delaymin>1.0</delaymin>
+		<delaymax>2.0</delaymax>
+		<delaystart>0.0</delaystart>
+		<volmod>0.2</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1805,14 +1829,15 @@
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
-<machine name="Plains Empty wind, indoor">
+<machine name="Empty wind, indoor">
 	<descriptible>
-		<nickname>Plains Empty wind, indoor</nickname>
+		<nickname>Empty wind, indoor</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
 	<allow>Plains</allow>
+	<allow>Cold area</allow>
 	<restrict>Outdoor</restrict>
 	<restrict>Forest</restrict>
 	<restrict>Is Raining</restrict>
