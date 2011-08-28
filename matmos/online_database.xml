@@ -161,6 +161,18 @@
 	<symbol>&lt;</symbol>
 	<constant>14000.0</constant>
 </condition>
+<condition name="Can rain on">
+	<descriptible>
+		<nickname>Can rain on</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>Instants</sheet>
+	<key>26</key>
+	<symbol>==</symbol>
+	<constant>1.0</constant>
+</condition>
 <condition name="Manmade Town">
 	<descriptible>
 		<nickname>Manmade Town</nickname>
@@ -328,6 +340,18 @@
 	<key>51</key>
 	<symbol>&gt;</symbol>
 	<constant>6.0</constant>
+</condition>
+<condition name="ENV_54789">
+	<descriptible>
+		<nickname>ENV_54789</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SpecialLarge</sheet>
+	<key>0</key>
+	<symbol>==</symbol>
+	<constant>54789.0</constant>
 </condition>
 <condition name="Time (0 - 22000)">
 	<descriptible>
@@ -551,6 +575,7 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Receive Sunlight</truepart>
+	<falsepart>Can rain on</falsepart>
 	<truepart>Sunlight lower than 10/15</truepart>
 </set>
 <set name="Highlands (96, Visible)">
@@ -571,6 +596,7 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Can rain on</truepart>
 	<falsepart>Sunlight lower than 10/15</falsepart>
 </set>
 <set name="Manmade Town">
@@ -806,6 +832,7 @@
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Is Raining</truepart>
 	<truepart>Windows (7)</truepart>
+	<falsepart>Can rain on</falsepart>
 </set>
 <set name="In Nether">
 	<descriptible>
