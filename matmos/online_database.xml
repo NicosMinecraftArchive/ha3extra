@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
-<dynamic name="Manmade Common (T Small)">
+<dynamic name="Lava (Small)">
 	<descriptible>
-		<nickname>Manmade Common (T Small)</nickname>
-		<description>Items commonly used by players to build houses, that aren't proeminent somewhere else (example: Tree log, Stone)</description>
+		<nickname>Lava (Small)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="SmallScan">10</entry>
+	<entry sheet="SmallScan">11</entry>
+</dynamic>
+<dynamic name="Iceland (Large)">
+	<descriptible>
+		<nickname>Iceland (Large)</nickname>
+		<description>Snow and ice</description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="LargeScan">78</entry>
+	<entry sheet="LargeScan">79</entry>
+</dynamic>
+<dynamic name="Water (Small)">
+	<descriptible>
+		<nickname>Water (Small)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<entry sheet="SmallScan">8</entry>
+	<entry sheet="SmallScan">9</entry>
+</dynamic>
+<dynamic name="Manmade Structures (Small)">
+	<descriptible>
+		<nickname>Manmade Structures (Small)</nickname>
+		<description>Items commonly used by players to build houses, that aren't proeminent somewhere else like Tree Log and Stone</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -21,11 +51,11 @@
 	<entry sheet="SmallScan">67</entry>
 	<entry sheet="SmallScan">24</entry>
 </dynamic>
-<dynamic name="Rocks (T Small)">
+<dynamic name="Rocks (Small)">
 	<descriptible>
-		<nickname>Rocks (T Small)</nickname>
+		<nickname>Rocks (Small)</nickname>
 		<description>Natural stones and cobblestone, including netherrack (does not include slabs)
-*aether</description>
+* Contains traces of the Aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -35,36 +65,18 @@
 	<entry sheet="SmallScan">87</entry>
 	<entry sheet="SmallScan">189</entry>
 </dynamic>
-<dynamic name="Water (T Small)">
+<condition name="Big fire (30 L)">
 	<descriptible>
-		<nickname>Water (T Small)</nickname>
+		<nickname>Big fire (30 L)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<entry sheet="SmallScan">8</entry>
-	<entry sheet="SmallScan">9</entry>
-</dynamic>
-<dynamic name="Iceland (T Scan)">
-	<descriptible>
-		<nickname>Iceland (T Scan)</nickname>
-		<description>Snow and ice</description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<entry sheet="LargeScan">78</entry>
-	<entry sheet="LargeScan">79</entry>
-</dynamic>
-<dynamic name="Lava (T Small)">
-	<descriptible>
-		<nickname>Lava (T Small)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<entry sheet="SmallScan">10</entry>
-	<entry sheet="SmallScan">11</entry>
-</dynamic>
+	<sheet>LargeScan</sheet>
+	<key>51</key>
+	<symbol>&gt;</symbol>
+	<constant>30.0</constant>
+</condition>
 <condition name="ZZZ DEBUG TRUE">
 	<descriptible>
 		<nickname>ZZZ DEBUG TRUE</nickname>
@@ -74,20 +86,8 @@
 	</descriptible>
 	<sheet>Instants</sheet>
 	<key>4</key>
-	<symbol>!=</symbol>
+	<symbol>==</symbol>
 	<constant>-1.0</constant>
-</condition>
-<condition name="Cold world">
-	<descriptible>
-		<nickname>Cold world</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<key>-1</key>
-	<dynamickey>Iceland (T Scan)</dynamickey>
-	<symbol>&gt;</symbol>
-	<constant>40.0</constant>
 </condition>
 <condition name="Sunlight lower than 5/15">
 	<descriptible>
@@ -125,10 +125,34 @@
 	<symbol>&gt;</symbol>
 	<constant>0.0</constant>
 </condition>
+<condition name="Sand closeby (10%)">
+	<descriptible>
+		<nickname>Sand closeby (10%)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScanPerMil</sheet>
+	<key>12</key>
+	<symbol>&gt;</symbol>
+	<constant>100.0</constant>
+</condition>
+<condition name="Cold world (L)">
+	<descriptible>
+		<nickname>Cold world (L)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<key>-1</key>
+	<dynamickey>Iceland (Large)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>40.0</constant>
+</condition>
 <condition name="In Aether (Assumption)">
 	<descriptible>
 		<nickname>In Aether (Assumption)</nickname>
-		<description></description>
+		<description>Detects the Aether, or any other world that uses dimension 3 as a parallel world.</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -173,6 +197,18 @@
 	<symbol>==</symbol>
 	<constant>1.0</constant>
 </condition>
+<condition name="Air is tight 35%">
+	<descriptible>
+		<nickname>Air is tight 35%</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScanPerMil</sheet>
+	<key>0</key>
+	<symbol>&lt;</symbol>
+	<constant>350.0</constant>
+</condition>
 <condition name="Manmade Town">
 	<descriptible>
 		<nickname>Manmade Town</nickname>
@@ -181,7 +217,7 @@
 		<meta></meta>
 	</descriptible>
 	<key>-1</key>
-	<dynamickey>Manmade Common (T Small)</dynamickey>
+	<dynamickey>Manmade Structures (Small)</dynamickey>
 	<symbol>&gt;</symbol>
 	<constant>64.0</constant>
 </condition>
@@ -233,21 +269,9 @@
 	<symbol>&gt;</symbol>
 	<constant>100.0</constant>
 </condition>
-<condition name="Windows (7)">
+<condition name="Sand 4.5% (L)">
 	<descriptible>
-		<nickname>Windows (7)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>SmallScan</sheet>
-	<key>20</key>
-	<symbol>&gt;</symbol>
-	<constant>7.0</constant>
-</condition>
-<condition name="Sand 10% (L)">
-	<descriptible>
-		<nickname>Sand 10% (L)</nickname>
+		<nickname>Sand 4.5% (L)</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
@@ -255,7 +279,19 @@
 	<sheet>LargeScanPerMil</sheet>
 	<key>12</key>
 	<symbol>&gt;</symbol>
-	<constant>100.0</constant>
+	<constant>45.0</constant>
+</condition>
+<condition name="Lava">
+	<descriptible>
+		<nickname>Lava</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<key>-1</key>
+	<dynamickey>Lava (Small)</dynamickey>
+	<symbol>&gt;</symbol>
+	<constant>12.0</constant>
 </condition>
 <condition name="Sunlight lower than 10/15">
 	<descriptible>
@@ -293,18 +329,6 @@
 	<symbol>==</symbol>
 	<constant>1.0</constant>
 </condition>
-<condition name="Air is tight 35% (S)">
-	<descriptible>
-		<nickname>Air is tight 35% (S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>SmallScanPerMil</sheet>
-	<key>0</key>
-	<symbol>&lt;</symbol>
-	<constant>350.0</constant>
-</condition>
 <condition name="Sunlight Maximum 15/15">
 	<descriptible>
 		<nickname>Sunlight Maximum 15/15</nickname>
@@ -340,18 +364,6 @@
 	<key>51</key>
 	<symbol>&gt;</symbol>
 	<constant>6.0</constant>
-</condition>
-<condition name="ENV_54789">
-	<descriptible>
-		<nickname>ENV_54789</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>SpecialLarge</sheet>
-	<key>0</key>
-	<symbol>==</symbol>
-	<constant>54789.0</constant>
 </condition>
 <condition name="Time (0 - 22000)">
 	<descriptible>
@@ -392,12 +404,12 @@
 <condition name="Rocks (24 S)">
 	<descriptible>
 		<nickname>Rocks (24 S)</nickname>
-		<description>*aether</description>
+		<description>* Contains traces of the Aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
 	<key>-1</key>
-	<dynamickey>Rocks (T Small)</dynamickey>
+	<dynamickey>Rocks (Small)</dynamickey>
 	<symbol>&gt;</symbol>
 	<constant>24.0</constant>
 </condition>
@@ -421,21 +433,9 @@
 		<meta></meta>
 	</descriptible>
 	<key>-1</key>
-	<dynamickey>Water (T Small)</dynamickey>
+	<dynamickey>Water (Small)</dynamickey>
 	<symbol>&gt;</symbol>
 	<constant>4.0</constant>
-</condition>
-<condition name="Big fire (30)">
-	<descriptible>
-		<nickname>Big fire (30)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<sheet>LargeScan</sheet>
-	<key>51</key>
-	<symbol>&gt;</symbol>
-	<constant>30.0</constant>
 </condition>
 <condition name="Time (0 - 6000)">
 	<descriptible>
@@ -449,22 +449,10 @@
 	<symbol>&lt;</symbol>
 	<constant>6000.0</constant>
 </condition>
-<condition name="Lava (S)">
-	<descriptible>
-		<nickname>Lava (S)</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<key>-1</key>
-	<dynamickey>Lava (T Small)</dynamickey>
-	<symbol>&gt;</symbol>
-	<constant>12.0</constant>
-</condition>
 <condition name="Trees 512 (L)">
 	<descriptible>
 		<nickname>Trees 512 (L)</nickname>
-		<description>2048 blocks of leaves</description>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -500,7 +488,7 @@
 <condition name="Deep (32)">
 	<descriptible>
 		<nickname>Deep (32)</nickname>
-		<description>Altitude is lesser than 32</description>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -508,6 +496,18 @@
 	<key>4</key>
 	<symbol>&lt;</symbol>
 	<constant>32.0</constant>
+</condition>
+<condition name="Windows (8)">
+	<descriptible>
+		<nickname>Windows (8)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScan</sheet>
+	<key>20</key>
+	<symbol>&gt;=</symbol>
+	<constant>8.0</constant>
 </condition>
 <set name="ZZZ DEBUG TRUE">
 	<descriptible>
@@ -540,7 +540,7 @@
 <set name="Rock shelter">
 	<descriptible>
 		<nickname>Rock shelter</nickname>
-		<description>*aether</description>
+		<description>* Contains traces of the Aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -626,8 +626,8 @@
 		<meta></meta>
 	</descriptible>
 	<truepart>Air 30% (L)</truepart>
-	<truepart>Cold world</truepart>
 	<truepart>Receive Sunlight</truepart>
+	<truepart>Cold world (L)</truepart>
 </set>
 <set name="Thunderstorm outdoor">
 	<descriptible>
@@ -656,8 +656,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air is tight 35% (S)</truepart>
 	<truepart>In Nether</truepart>
+	<truepart>Air is tight 35%</truepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -684,8 +684,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Air is tight 35% (S)</falsepart>
 	<truepart>In Nether</truepart>
+	<falsepart>Air is tight 35%</falsepart>
 </set>
 <set name="Time (6000 - 12000)">
 	<descriptible>
@@ -700,7 +700,7 @@
 <set name="Plains">
 	<descriptible>
 		<nickname>Plains</nickname>
-		<description></description>
+		<description>Plains is a sub-requirement for a forest. A forest is basically plains + trees, therefore sounds related to Plains and only to Plains must be jammed by Forest.</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -715,9 +715,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air is tight 35% (S)</truepart>
-	<truepart>Big fire (30)</truepart>
+	<truepart>Big fire (30 L)</truepart>
 	<truepart>In Nether</truepart>
+	<truepart>Air is tight 35%</truepart>
 </set>
 <set name="Nearby fire (1) Not firecamp">
 	<descriptible>
@@ -748,7 +748,7 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Lava (S)</truepart>
+	<truepart>Lava</truepart>
 </set>
 <set name="Wet cave">
 	<descriptible>
@@ -759,12 +759,12 @@
 	</descriptible>
 	<truepart>Rocks (24 S)</truepart>
 	<truepart>Nearby water</truepart>
-	<truepart>Air is tight 35% (S)</truepart>
+	<truepart>Air is tight 35%</truepart>
 </set>
 <set name="Forest">
 	<descriptible>
 		<nickname>Forest</nickname>
-		<description>The player can see a forest.</description>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -817,9 +817,10 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<truepart>Nearby water</truepart>
 	<truepart>Air 30% (L)</truepart>
-	<truepart>Water 10% (L)</truepart>
-	<truepart>Sand 10% (L)</truepart>
+	<truepart>Sand closeby (10%)</truepart>
+	<truepart>Sand 4.5% (L)</truepart>
 </set>
 <set name="Raining in a house with windows">
 	<descriptible>
@@ -831,7 +832,7 @@
 	<falsepart>Sunlight Maximum 15/15</falsepart>
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Is Raining</truepart>
-	<truepart>Windows (7)</truepart>
+	<truepart>Windows (8)</truepart>
 	<falsepart>Can rain on</falsepart>
 </set>
 <set name="In Nether">
@@ -850,13 +851,13 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Big fire (30)</truepart>
+	<truepart>Big fire (30 L)</truepart>
 	<falsepart>In Nether</falsepart>
 </set>
 <set name="Deep cave (16)">
 	<descriptible>
 		<nickname>Deep cave (16)</nickname>
-		<description>*aether</description>
+		<description>* Contains traces of the Aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -879,7 +880,7 @@
 <set name="Deep cave (32)">
 	<descriptible>
 		<nickname>Deep cave (32)</nickname>
-		<description>*aether</description>
+		<description>* Contains traces of the Aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -895,9 +896,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air is tight 35% (S)</truepart>
 	<truepart>Nearby fire (7)</truepart>
 	<truepart>In Nether</truepart>
+	<truepart>Air is tight 35%</truepart>
 </set>
 <set name="Time (12000 - 14000)">
 	<descriptible>
@@ -926,9 +927,9 @@
 	<pitchmax>1.3</pitchmax>
 	<metasound>0</metasound>
 </event>
-<event name="Cave freightening">
+<event name="Scary cave, bass sounds">
 	<descriptible>
-		<nickname>Cave freightening</nickname>
+		<nickname>Scary cave, bass sounds</nickname>
 		<description></description>
 		<icon></icon>
 		<meta></meta>
@@ -939,10 +940,10 @@
 	<path>newsound/matmos_hl/atmosphere/cave_hit4.ogg</path>
 	<path>newsound/matmos_hl/atmosphere/cave_hit5.ogg</path>
 	<path>newsound/matmos_hl/atmosphere/cave_hit6.ogg</path>
-	<volmin>0.5</volmin>
+	<volmin>1.0</volmin>
 	<volmax>0.7</volmax>
-	<pitchmin>0.7</pitchmin>
-	<pitchmax>1.1</pitchmax>
+	<pitchmin>0.4</pitchmin>
+	<pitchmax>0.9</pitchmax>
 	<metasound>32</metasound>
 </event>
 <event name="Fire (Small)">
@@ -1038,25 +1039,6 @@
 	<pitchmin>0.9</pitchmin>
 	<pitchmax>0.9</pitchmax>
 	<metasound>0</metasound>
-</event>
-<event name="Cafe freightening bass">
-	<descriptible>
-		<nickname>Cafe freightening bass</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<path>newsound/matmos_hl/atmosphere/cave_hit1.ogg</path>
-	<path>newsound/matmos_hl/atmosphere/cave_hit2.ogg</path>
-	<path>newsound/matmos_hl/atmosphere/cave_hit3.ogg</path>
-	<path>newsound/matmos_hl/atmosphere/cave_hit4.ogg</path>
-	<path>newsound/matmos_hl/atmosphere/cave_hit5.ogg</path>
-	<path>newsound/matmos_hl/atmosphere/cave_hit6.ogg</path>
-	<volmin>0.5</volmin>
-	<volmax>0.7</volmax>
-	<pitchmin>0.4</pitchmin>
-	<pitchmax>0.9</pitchmax>
-	<metasound>32</metasound>
 </event>
 <event name="Fire (Big)">
 	<descriptible>
@@ -1185,6 +1167,25 @@
 	<volmax>1.0</volmax>
 	<pitchmin>1.0</pitchmin>
 	<pitchmax>1.0</pitchmax>
+	<metasound>32</metasound>
+</event>
+<event name="Scary cave">
+	<descriptible>
+		<nickname>Scary cave</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<path>newsound/matmos_hl/atmosphere/cave_hit1.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit2.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit3.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit4.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit5.ogg</path>
+	<path>newsound/matmos_hl/atmosphere/cave_hit6.ogg</path>
+	<volmin>1.0</volmin>
+	<volmax>0.7</volmax>
+	<pitchmin>0.7</pitchmin>
+	<pitchmax>1.1</pitchmax>
 	<metasound>32</metasound>
 </event>
 <event name="Wind, very strong">
@@ -1388,7 +1389,7 @@
 <machine name="Rock shelter">
 	<descriptible>
 		<nickname>Rock shelter</nickname>
-		<description>*aether</description>
+		<description>* Contains traces of the Aether</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -1418,30 +1419,6 @@
 		<delaymax>6.0</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>0.5</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-</machine>
-<machine name="Clock">
-	<descriptible>
-		<nickname>Clock</nickname>
-		<description></description>
-		<icon></icon>
-		<meta></meta>
-	</descriptible>
-	<eventtimed>
-		<eventname>Clock tick A</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>2.0</delaymax>
-		<delaystart>0.5</delaystart>
-		<volmod>0.4</volmod>
-		<pitchmod>1.0</pitchmod>
-	</eventtimed>
-	<eventtimed>
-		<eventname>Clock tick B</eventname>
-		<delaymin>2.0</delaymin>
-		<delaymax>2.0</delaymax>
-		<delaystart>1.5</delaystart>
-		<volmod>0.4</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
@@ -1620,7 +1597,7 @@
 	<allow>Digging in the Nether</allow>
 	<allow>Digging safely in Nether</allow>
 	<eventtimed>
-		<eventname>Cafe freightening bass</eventname>
+		<eventname>Scary cave, bass sounds</eventname>
 		<delaymin>2.0</delaymin>
 		<delaymax>4.0</delaymax>
 		<delaystart>0.0</delaystart>
@@ -1649,7 +1626,7 @@
 <machine name="Fire (Class 0)">
 	<descriptible>
 		<nickname>Fire (Class 0)</nickname>
-		<description>TODO</description>
+		<description></description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -1727,7 +1704,7 @@
 	</descriptible>
 	<allow>Deep cave (32)</allow>
 	<eventtimed>
-		<eventname>Cave freightening</eventname>
+		<eventname>Scary cave</eventname>
 		<delaymin>7.0</delaymin>
 		<delaymax>32.0</delaymax>
 		<delaystart>0.0</delaystart>
@@ -1791,7 +1768,7 @@
 <machine name="ZZZ DEBUGGER">
 	<descriptible>
 		<nickname>ZZZ DEBUGGER</nickname>
-		<description></description>
+		<description>Debugger used to check if a the database works in case of issues. Change the Condition associated with it for testing. Will run a melody after 5 seconds.</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -1851,7 +1828,7 @@
 <machine name="Highlands winds">
 	<descriptible>
 		<nickname>Highlands winds</nickname>
-		<description>(not Aether)</description>
+		<description>* Contains traces of the Aether: Will not work in the Aether.</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
@@ -1897,7 +1874,7 @@
 <machine name="Deep cave rumble (16)">
 	<descriptible>
 		<nickname>Deep cave rumble (16)</nickname>
-		<description></description>
+		<description>Is a louder version of Deep Cave Rumble 32. The 32 is jammed when 16 is on to prevent unecessary overlap.</description>
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
