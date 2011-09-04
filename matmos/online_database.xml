@@ -985,7 +985,7 @@
 	<volmin>0.4</volmin>
 	<volmax>0.7</volmax>
 	<pitchmin>0.7</pitchmin>
-	<pitchmax>1.2</pitchmax>
+	<pitchmax>1.5</pitchmax>
 	<metasound>128</metasound>
 </event>
 <event name="Wind, trees">
