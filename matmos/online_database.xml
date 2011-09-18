@@ -685,8 +685,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Sunlight lower than 5/15</falsepart>
 	<truepart>Air 30% (L)</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
 	<truepart>Highlands (96)</truepart>
 </set>
 <set name="In Aether">
@@ -853,7 +853,6 @@
 	<truepart>Plains 1% (L)</truepart>
 	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
-	<truepart>Highplains (80)</truepart>
 </set>
 <set name="Raining in a house with windows">
 	<descriptible>
@@ -865,8 +864,8 @@
 	<falsepart>Sunlight Maximum 15/15</falsepart>
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Is Raining</truepart>
-	<truepart>Windows (8)</truepart>
 	<falsepart>Can rain on</falsepart>
+	<truepart>Windows (8)</truepart>
 </set>
 <set name="Rock shelter">
 	<descriptible>
@@ -886,9 +885,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Sunlight lower than 5/15</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Sunlight lower than 5/15</truepart>
 	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Thunderstorm outdoor">
@@ -898,9 +897,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Sunlight lower than 5/15</falsepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<falsepart>Sunlight lower than 5/15</falsepart>
 </set>
 <set name="Time (0 - 6000)">
 	<descriptible>
@@ -938,8 +937,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 22000)</truepart>
 	<falsepart>Time (0 - 14000)</falsepart>
+	<truepart>Time (0 - 22000)</truepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -957,8 +956,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Time (0 - 12000)</truepart>
 	<falsepart>Time (0 - 6000)</falsepart>
+	<truepart>Time (0 - 12000)</truepart>
 </set>
 <set name="Wet cave">
 	<descriptible>
@@ -1661,7 +1660,7 @@
 		<delaymin>2.0</delaymin>
 		<delaymax>9.0</delaymax>
 		<delaystart>0.0</delaystart>
-		<volmod>0.2</volmod>
+		<volmod>0.1</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 	<eventtimed>
@@ -1669,7 +1668,7 @@
 		<delaymin>1.0</delaymin>
 		<delaymax>2.0</delaymax>
 		<delaystart>0.0</delaystart>
-		<volmod>0.2</volmod>
+		<volmod>0.03</volmod>
 		<pitchmod>1.0</pitchmod>
 	</eventtimed>
 </machine>
