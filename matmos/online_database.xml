@@ -533,6 +533,19 @@
 	<constant>100</constant>
 	<list></list>
 </condition>
+<condition name="Water 5% (S)">
+	<descriptible>
+		<nickname>Water 5% (S)</nickname>
+		<description></description>
+		<icon></icon>
+		<meta></meta>
+	</descriptible>
+	<sheet>SmallScanPerMil</sheet>
+	<key>9</key>
+	<symbol>&gt;</symbol>
+	<constant>50</constant>
+	<list></list>
+</condition>
 <condition name="Windows (8)">
 	<descriptible>
 		<nickname>Windows (8)</nickname>
@@ -575,8 +588,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Nearby water</truepart>
 	<truepart>Air 30% (L)</truepart>
+	<truepart>Water 5% (S)</truepart>
 	<truepart>Sand closeby (10%)</truepart>
 	<truepart>Sand 4.5% (L)</truepart>
 </set>
@@ -685,8 +698,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Highlands (96)</truepart>
 </set>
 <set name="In Aether">
@@ -864,8 +877,8 @@
 	<falsepart>Sunlight Maximum 15/15</falsepart>
 	<truepart>Receive Sunlight</truepart>
 	<truepart>Is Raining</truepart>
-	<falsepart>Can rain on</falsepart>
 	<truepart>Windows (8)</truepart>
+	<falsepart>Can rain on</falsepart>
 </set>
 <set name="Rock shelter">
 	<descriptible>
@@ -885,9 +898,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<truepart>Sunlight lower than 5/15</truepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
 	<truepart>Receive Sunlight</truepart>
 </set>
 <set name="Thunderstorm outdoor">
@@ -897,9 +910,9 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<truepart>Air 30% (L)</truepart>
-	<truepart>In Thunderstorm</truepart>
 	<falsepart>Sunlight lower than 5/15</falsepart>
+	<truepart>In Thunderstorm</truepart>
+	<truepart>Air 30% (L)</truepart>
 </set>
 <set name="Time (0 - 6000)">
 	<descriptible>
@@ -937,8 +950,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 14000)</falsepart>
 	<truepart>Time (0 - 22000)</truepart>
+	<falsepart>Time (0 - 14000)</falsepart>
 </set>
 <set name="Time (22000 - 23999)">
 	<descriptible>
@@ -956,8 +969,8 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
-	<falsepart>Time (0 - 6000)</falsepart>
 	<truepart>Time (0 - 12000)</truepart>
+	<falsepart>Time (0 - 6000)</falsepart>
 </set>
 <set name="Wet cave">
 	<descriptible>
