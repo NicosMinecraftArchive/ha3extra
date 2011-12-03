@@ -125,8 +125,8 @@
 	<restrict>Is moving in Minecart fast</restrict>
 	<eventtimed>
 		<eventname>Moving in Minecart</eventname>
-		<delaymin>0.5</delaymin>
-		<delaymax>0.7</delaymax>
+		<delaymin>0.7</delaymin>
+		<delaymax>0.8</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>1.0</volmod>
 		<pitchmod>1.0</pitchmod>
@@ -142,8 +142,8 @@
 	<allow>Is moving in Minecart fast</allow>
 	<eventtimed>
 		<eventname>Moving in Minecart fast</eventname>
-		<delaymin>0.4</delaymin>
-		<delaymax>0.6</delaymax>
+		<delaymin>0.6</delaymin>
+		<delaymax>0.7</delaymax>
 		<delaystart>0.0</delaystart>
 		<volmod>1.0</volmod>
 		<pitchmod>1.0</pitchmod>
