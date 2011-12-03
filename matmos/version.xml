@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
 <release>
+	<version>8</version>
+	<nutshell>AudioMod compatibility fix</nutshell>
+</release>
+<release>
 	<version>7</version>
 </release>
 </contents>
