@@ -23,7 +23,7 @@
 	<sheet>Instants</sheet>
 	<key>74</key>
 	<symbol>&gt;</symbol>
-	<constant>2000</constant>
+	<constant>1500</constant>
 	<list></list>
 </condition>
 <condition name="Is very Speedy">
@@ -36,7 +36,7 @@
 	<sheet>Instants</sheet>
 	<key>74</key>
 	<symbol>&gt;</symbol>
-	<constant>4000</constant>
+	<constant>3000</constant>
 	<list></list>
 </condition>
 <set name="Is moving in Minecart">
@@ -122,6 +122,7 @@
 		<meta></meta>
 	</descriptible>
 	<allow>Is moving in Minecart</allow>
+	<restrict>Is moving in Minecart fast</restrict>
 	<eventtimed>
 		<eventname>Moving in Minecart</eventname>
 		<delaymin>0.5</delaymin>
@@ -138,6 +139,7 @@
 		<icon></icon>
 		<meta></meta>
 	</descriptible>
+	<allow>Is moving in Minecart fast</allow>
 	<eventtimed>
 		<eventname>Moving in Minecart fast</eventname>
 		<delaymin>0.4</delaymin>
