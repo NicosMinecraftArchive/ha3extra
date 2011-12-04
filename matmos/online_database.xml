@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
+<expansion>
+	<data>32</data>
+</expansion>
 <dynamic name="Iceland (Large)">
 	<descriptible>
 		<nickname>Iceland (Large)</nickname>
