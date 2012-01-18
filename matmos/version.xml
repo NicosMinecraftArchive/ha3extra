@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
 <release>
+	<version>10</version>
+	<nutshell>Upgrade to Minecraft 1.1.x, no new features</nutshell>
+</release>
+<release>
 	<version>8</version>
 	<nutshell>AudioMod compatibility fix</nutshell>
 </release>
