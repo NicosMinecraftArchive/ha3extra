@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contents>
+<release>
+	<version>13</version>
+	<nutshell>New features and upgrade to 1.3.2</nutshell>
+</release>
+<release>
+	<version>11</version>
+	<nutshell>Upgrade to Minecraft 1.2.3, no new features (compiled by VoxelBox)</nutshell>
+</release>
+<release>
+	<version>10</version>
+	<nutshell>Upgrade to Minecraft 1.1.x, no new features</nutshell>
+</release>
+<release>
+	<version>8</version>
+	<nutshell>AudioMod compatibility fix</nutshell>
+</release>
+<release>
+	<version>7</version>
+</release>
+</contents>
