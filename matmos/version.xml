@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
 <release>
+	<version>17</version>
+	<nutshell>Update to Minecraft 1.3.2 (Menu update)</nutshell>
+</release>
+<release>
 	<version>11</version>
 	<nutshell>Upgrade to Minecraft 1.2.3, no new features (compiled by VoxelBox)</nutshell>
 </release>
