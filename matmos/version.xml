@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
 <release>
+	<version>19</version>
+	<nutshell>Update to Minecraft 1.4.2 + New sheets</nutshell>
+</release>
+<release>
 	<version>18</version>
 	<nutshell>Added Preview and Scroller</nutshell>
 </release>
