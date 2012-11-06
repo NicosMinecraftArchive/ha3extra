@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
 <release>
+	<version>1</version>
+	<nutshell>Bugfixes, background music, play music button</nutshell>
+</release>
+<release>
 	<version>0</version>
 	<nutshell>First release</nutshell>
 </release>
