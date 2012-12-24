@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contents>
 <release>
+	<version>3</version>
+	<nutshell>Background music never overrides</nutshell>
+</release>
+<release>
 	<version>2</version>
 	<nutshell>Version upgrade</nutshell>
 </release>
